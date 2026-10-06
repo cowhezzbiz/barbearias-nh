@@ -3,98 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio | 6 sites para barbearias de Novo Hamburgo</title>
-<meta name="description" content="Seis sites desenvolvidos para barbearias de Novo Hamburgo, cada um com identidade visual própria.">
+<title>Portf&oacute;lio | 6 sites para barbearias de Novo Hamburgo</title>
+<meta name="description" content="Seis sites desenvolvidos para barbearias de Novo Hamburgo, cada um com identidade visual propria.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d1117;--panel:#141b24;--txt:#e8eef5;--muted:#8291a5;--line:rgba(255,255,255,.08);--mint:#3ddc97}
+:root{--bg:#0d1117;--panel:#141b24;--panel2:#1a2331;--ink:#e8eef5;--dim:#8291a5;--line:rgba(255,255,255,.09);--gold:#d4a853}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--txt);line-height:1.64;min-height:100vh}
-.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
-header{padding:92px 0 34px;text-align:center}
-header .k{color:var(--mint);font-weight:700;font-size:.74rem;letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:18px}
-header h1{font-family:'Bebas Neue';font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:1px;margin-bottom:18px;line-height:1}
-header h1 span{color:var(--mint)}
-header p{color:var(--muted);max-width:640px;margin:0 auto;font-size:1.03rem}
-.legend{display:flex;gap:28px;justify-content:center;margin-top:30px;flex-wrap:wrap;font-size:.83rem;color:var(--muted)}
-.legend b{color:var(--txt)}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.66;min-height:100vh}
+.wrap{max-width:1260px;margin:0 auto;padding:0 28px}
+h1,h2,h3,.dsp{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.5px;font-weight:400}
+.masthead{position:sticky;top:0;z-index:70;background:rgba(13,17,23,.94);backdrop-filter:blur(16px);border-bottom:2px solid var(--gold)}
+.masthead .wrap{display:flex;justify-content:space-between;align-items:center;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{width:38px;height:38px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Archivo Black';font-size:1.1rem}
+.brand .nm{font-family:'Archivo Black';font-size:1.45rem;color:var(--ink);letter-spacing:-.5px}
+.brand .nm span{color:var(--gold)}
+.mh-nav a{color:var(--dim);text-decoration:none;font-size:.87rem;margin-left:26px;transition:.2s}
+.mh-nav a:hover{color:var(--gold)}
+.ticker{background:var(--gold);color:#0d1117;padding:12px 0;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;font-family:'Archivo Black';text-transform:uppercase;font-size:.9rem;animation:tk 30s linear infinite}
+.ticker b{margin:0 26px}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+header{padding:70px 0 20px}
+header .k{color:var(--gold);font-weight:700;font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;display:block;margin-bottom:18px}
+header h1{font-size:clamp(2.4rem,6.5vw,4.8rem);line-height:.94;letter-spacing:-2px;margin-bottom:20px}
+header h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--gold)}
+header p{color:var(--dim);max-width:660px;font-size:1.05rem}
+.legend{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;font-size:.85rem;color:var(--dim)}
+.legend b{color:var(--ink)}
 .legend .d{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:middle}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px;padding:48px 0 92px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--txt);transition:.25s;display:block}
-.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.22)}
-.card .thumb{height:170px;overflow:hidden;position:relative}
-.card .thumb img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:brightness(.85)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:0;padding:44px 0 90px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:.25s;display:block;background:var(--bg)}
+.card:hover{background:var(--panel2)}
+.card .thumb{height:190px;overflow:hidden;position:relative}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:brightness(.82)}
 .card:hover .thumb img{transform:scale(1.06);filter:brightness(1)}
-.card .thumb .style{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(transparent,rgba(13,17,23,.94));font-size:.68rem;letter-spacing:2px;text-transform:uppercase;font-weight:700}
-.card-body{padding:24px}
+.card .thumb .style{position:absolute;bottom:0;left:0;right:0;padding:14px 22px;background:linear-gradient(transparent,rgba(13,17,23,.95));font-family:'Archivo Black';font-size:.66rem;letter-spacing:2px;text-transform:uppercase}
+.card-body{padding:26px}
 .top-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:12px}
-.card h3{font-size:1.2rem;font-weight:700}
-.tag{font-size:.64rem;font-weight:700;padding:5px 11px;border-radius:20px;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap}
-.tag.novo{background:rgba(61,220,151,.14);color:var(--mint)}
-.tag.refeito{background:rgba(255,180,60,.14);color:#ffb43c}
-.card .hood{color:var(--muted);font-size:.87rem;margin-bottom:6px}
-.card .rate{color:var(--txt);font-size:.91rem;margin-bottom:18px}
-.card .rate span{color:var(--muted);font-size:.81rem}
-.ver{color:var(--mint);font-weight:600;font-size:.87rem}
-footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;color:var(--muted);font-size:.83rem}
+.card h3{font-size:1.15rem}
+.tag{font-family:'Archivo Black';font-size:.6rem;padding:5px 10px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.tag.novo{background:rgba(61,220,151,.14);color:#3ddc97}
+.tag.refeito{background:rgba(212,168,83,.16);color:var(--gold)}
+.card .hood{color:var(--dim);font-size:.86rem;margin-bottom:6px}
+.card .rate{color:var(--ink);font-size:.9rem;margin-bottom:18px}
+.card .rate span{color:var(--dim);font-size:.8rem}
+.ver{color:var(--gold);font-weight:600;font-size:.85rem}
+footer{border-top:2px solid var(--gold);padding:36px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot .l{font-family:'Archivo Black';font-size:1.1rem}
+.foot .l span{color:var(--gold)}
+.foot .r{color:var(--dim);font-size:.76rem;letter-spacing:1px;text-transform:uppercase}
 </style>
 </head>
 <body>
+<div class="masthead"><div class="wrap">
+<a href="#" class="brand"><span class="mk">C</span><span class="nm">COW<span>BUSINESS</span></span></a>
+<div class="mh-nav"><a href="https://cowbusiness.vercel.app">Site principal</a><a href="#sites">Sites</a></div>
+</div></div>
+
+<div class="ticker"><span>BARBEARIAS DE NOVO HAMBURGO <b>&#9670;</b> SEIS IDENTIDADES <b>&#9670;</b> DESIGN SOB MEDIDA <b>&#9670;</b> BARBEARIAS DE NOVO HAMBURGO <b>&#9670;</b> SEIS IDENTIDADES <b>&#9670;</b> DESIGN SOB MEDIDA <b>&#9670;</b></span></div>
+
 <div class="wrap">
 <header>
-<span class="k">Portfólio</span>
-<h1>6 BARBEARIAS.<br><span>6 IDENTIDADES.</span></h1>
-<p>Cada site com design, paleta e linguagem próprios, feitos sob medida para o estilo de cada barbearia de Novo Hamburgo.</p>
-<div class="legend"><span><span class="d" style="background:#3ddc97"></span><b>3</b> sites criados do zero</span><span><span class="d" style="background:#ffb43c"></span><b>3</b> sites reformulados</span></div>
+<span class="k">Portf&oacute;lio</span>
+<h1>Seis barbearias.<br><em>Seis identidades.</em></h1>
+<p>Cada site com design, paleta e linguagem pr&oacute;prios, feitos sob medida para o estilo de cada barbearia de Novo Hamburgo. Nada de template repetido.</p>
+<div class="legend"><span><span class="d" style="background:#3ddc97"></span><b>3</b> sites criados do zero</span><span><span class="d" style="background:#d4a853"></span><b>3</b> sites reformulados</span></div>
 </header>
-<main class="grid">
+
+<main class="grid" id="sites">
 
 <a href="the-brothers/" class="card">
 <div class="thumb"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80" alt="The Brothers Barbearia"><div class="style" style="color:#00e5ff">Street / Urbano</div></div>
 <div class="card-body">
 <div class="top-row"><h3>The Brothers</h3><span class="tag novo">Novo</span></div>
-<p class="hood">Jardim Mauá</p><p class="rate">&#9733; 5.0 <span>(182 avaliações)</span></p>
+<p class="hood">Jardim Mau&aacute;</p><p class="rate">&#9733; 5.0 <span>(182 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 <a href="arend/" class="card">
-<div class="thumb"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=800&q=80" alt="Barbearia Arend"><div class="style" style="color:#b08d3f">Vintage Clássico</div></div>
+<div class="thumb"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=800&q=80" alt="Barbearia Arend"><div class="style" style="color:#b08d3f">Vintage Cl&aacute;ssico</div></div>
 <div class="card-body">
 <div class="top-row"><h3>Barbearia Arend</h3><span class="tag novo">Novo</span></div>
-<p class="hood">Centro</p><p class="rate">&#9733; 4.8 <span>(114 avaliações)</span></p>
+<p class="hood">Centro</p><p class="rate">&#9733; 4.8 <span>(114 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 <a href="kucao/" class="card">
-<div class="thumb"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80" alt="Kucão Barber"><div class="style" style="color:#2f6bff">Clean Minimalista</div></div>
+<div class="thumb"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80" alt="Kuc&atilde;o Barber"><div class="style" style="color:#2f6bff">Clean Minimalista</div></div>
 <div class="card-body">
-<div class="top-row"><h3>Kucão Barber</h3><span class="tag novo">Novo</span></div>
-<p class="hood">Canudos</p><p class="rate">&#9733; 4.9 <span>(308 avaliações)</span></p>
+<div class="top-row"><h3>Kuc&atilde;o Barber</h3><span class="tag novo">Novo</span></div>
+<p class="hood">Canudos</p><p class="rate">&#9733; 4.9 <span>(308 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 <a href="la-mafia/" class="card">
 <div class="thumb"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=80" alt="La Mafia Barbearia"><div class="style" style="color:#c9a227">Luxo Dark &amp; Dourado</div></div>
 <div class="card-body">
 <div class="top-row"><h3>La Mafia</h3><span class="tag refeito">Refeito</span></div>
-<p class="hood">Centro</p><p class="rate">&#9733; 4.8 <span>(301 avaliações)</span></p>
+<p class="hood">Centro</p><p class="rate">&#9733; 4.8 <span>(301 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 <a href="oito-primavera/" class="card">
 <div class="thumb"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="OITO Barbearia"><div class="style" style="color:#e8482f">Editorial / Revista</div></div>
 <div class="card-body">
 <div class="top-row"><h3>OITO Barbearia</h3><span class="tag refeito">Refeito</span></div>
-<p class="hood">Primavera &amp; Hamburgo Velho</p><p class="rate">&#9733; 5.0 <span>(262 avaliações)</span></p>
+<p class="hood">Primavera &amp; Hamburgo Velho</p><p class="rate">&#9733; 5.0 <span>(262 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 <a href="maisq/" class="card">
 <div class="thumb"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=800&q=80" alt="MaisQ Barber Club"><div class="style" style="color:#3ddc97">Premium Club</div></div>
 <div class="card-body">
 <div class="top-row"><h3>MaisQ Barber Club</h3><span class="tag refeito">Refeito</span></div>
-<p class="hood">Centro</p><p class="rate">&#9733; 5.0 <span>(609 avaliações)</span></p>
+<p class="hood">Centro</p><p class="rate">&#9733; 5.0 <span>(609 avalia&ccedil;&otilde;es)</span></p>
 <span class="ver">Ver site &rarr;</span></div></a>
 
 </main>
-<footer>&copy; 2026 &middot; Portfólio de sites para barbearias &middot; Novo Hamburgo/RS</footer>
 </div>
+
+<footer><div class="wrap"><div class="foot">
+<span class="l">COW<span>BUSINESS</span></span>
+<span class="r">&copy; 2026 &middot; Novo Hamburgo / RS</span>
+</div></div></footer>
 </body>
 </html>
