@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio de Sites — Barbearias Novo Hamburgo</title>
+<meta name="description" content="Sites criados e reformulados para barbearias de Novo Hamburgo.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root { --preto:#0a0a0a; --cinza-escuro:#161616; --cinza:#8b8b8b; --branco:#fff; --dourado:#d4a853; --dourado-escuro:#c8963e; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:var(--preto); color:var(--branco); line-height:1.6; min-height:100vh; }
+.container { max-width:1100px; margin:0 auto; padding:0 24px; }
+header { padding:80px 0 40px; text-align:center; }
+header h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.2rem); font-weight:700; margin-bottom:16px; }
+header h1 span { color:var(--dourado); }
+header p { color:var(--cinza); font-size:1.1rem; max-width:600px; margin:0 auto 24px; }
+.stats { display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:32px; }
+.stat { text-align:center; }
+.stat .num { font-size:2rem; font-weight:700; color:var(--dourado); }
+.stat .lbl { font-size:.85rem; color:var(--cinza); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; padding:40px 0 80px; }
+.card { background:var(--cinza-escuro); border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:28px; text-decoration:none; color:var(--branco); transition:all .25s; position:relative; display:block; }
+.card:hover { transform:translateY(-4px); border-color:var(--dourado); }
+.badge { position:absolute; top:16px; right:16px; font-size:.7rem; font-weight:600; padding:4px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.5px; }
+.badge.novo { background:rgba(34,197,94,.15); color:#4ade80; }
+.badge.refeito { background:rgba(212,168,83,.15); color:var(--dourado); }
+.card h3 { font-size:1.2rem; font-weight:600; margin-bottom:10px; padding-right:80px; }
+.card .bairro { color:var(--cinza); font-size:.9rem; margin-bottom:8px; }
+.card .rating { color:var(--branco); font-size:.95rem; margin-bottom:20px; }
+.card .rating span { color:var(--cinza); font-size:.85rem; }
+.card .ver { color:var(--dourado); font-weight:600; font-size:.9rem; }
+footer { border-top:1px solid rgba(255,255,255,.06); padding:32px 0; text-align:center; color:var(--cinza); font-size:.85rem; }
+</style>
+</head>
+<body>
+<header class="container">
+    <h1>Portfólio de <span>Sites</span></h1>
+    <p>Sites criados e reformulados para barbearias de Novo Hamburgo — design moderno, responsivo e otimizado para conversão.</p>
+    <div class="stats">
+        <div class="stat"><div class="num">6</div><div class="lbl">Barbearias</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Sites Criados</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Sites Refeitos</div></div>
+    </div>
+</header>
+<main class="container">
+    <div class="grid">
+        <a href="the-brothers/index.html" class="card">
+            <span class="badge novo">Site Novo</span>
+            <h3>The Brothers Barbearia</h3>
+            <p class="bairro">📍 Jardim Mauá — Novo Hamburgo</p>
+            <p class="rating">⭐ 5.0 <span>(182 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+        <a href="arend/index.html" class="card">
+            <span class="badge novo">Site Novo</span>
+            <h3>Barbearia Arend</h3>
+            <p class="bairro">📍 Centro — Novo Hamburgo</p>
+            <p class="rating">⭐ 4.8 <span>(114 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+        <a href="kucao/index.html" class="card">
+            <span class="badge novo">Site Novo</span>
+            <h3>Kucão Barber</h3>
+            <p class="bairro">📍 Canudos — Novo Hamburgo</p>
+            <p class="rating">⭐ 4.9 <span>(308 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+        <a href="la-mafia/index.html" class="card">
+            <span class="badge refeito">Site Refeito</span>
+            <h3>La Mafia Barbearia</h3>
+            <p class="bairro">📍 Centro — Novo Hamburgo</p>
+            <p class="rating">⭐ 4.8 <span>(301 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+        <a href="oito-primavera/index.html" class="card">
+            <span class="badge refeito">Site Refeito</span>
+            <h3>OITO Barbearia</h3>
+            <p class="bairro">📍 Primavera — Novo Hamburgo</p>
+            <p class="rating">⭐ 5.0 <span>(262 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+        <a href="maisq/index.html" class="card">
+            <span class="badge refeito">Site Refeito</span>
+            <h3>MaisQ Barber Club</h3>
+            <p class="bairro">📍 Centro — Novo Hamburgo</p>
+            <p class="rating">⭐ 5.0 <span>(609 avaliações)</span></p>
+            <span class="ver">Ver site →</span>
+        </a>
+    </div>
+</main>
+<footer>
+    <div class="container">© 2026 — Portfólio de Sites para Barbearias · Novo Hamburgo/RS</div>
+</footer>
+</body>
+</html>
