@@ -3,171 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barbearia Arend | Barbearia clássica no Centro de Novo Hamburgo</title>
-<meta name="description" content="Barbearia Arend no Centro de Novo Hamburgo. Corte na tesoura, barba na navalha e atendimento de confiança desde sempre.">
+<title>Barbearia Arend | Centro de Novo Hamburgo</title>
+<meta name="description" content="Barbearia Arend no Centro de Novo Hamburgo. Corte, barba e atendimento de confianca. Nota 4.8 no Google.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,900;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f4ece0;--paper:#faf5ec;--ink:#3a2a1c;--dim:#6b5540;--gold:#b08d3f;--red:#8c3a2e;--rule:rgba(58,42,28,.2)}
+:root{--cream:#f2e9db;--paper:#faf4ea;--ink:#2e2015;--dim:#6d5844;--gold:#a8823a;--red:#7d3327;--rule:rgba(46,32,21,.22)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Lora',serif;background:var(--cream);color:var(--ink);line-height:1.78}
-.wrap{max-width:1200px;margin:0 auto;padding:0 30px}
-svg{display:block}
+body{font-family:'Lora',serif;background:var(--cream);color:var(--ink);line-height:1.8}
+.wrap{max-width:1000px;margin:0 auto;padding:0 30px}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:900}
-/* MASTHEAD */
-.masthead{position:sticky;top:0;z-index:70;background:var(--paper);border-bottom:3px double var(--ink)}
-.masthead .wrap{display:flex;justify-content:space-between;align-items:center;height:82px}
-.brand{font-family:'Playfair Display';font-size:1.7rem;font-weight:900;text-decoration:none;color:var(--ink);letter-spacing:.5px}
-.brand small{display:block;font-family:'Lora';font-size:.56rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:400;margin-top:1px}
-.mh-nav{display:flex;gap:26px;align-items:center}
-.mh-nav a{color:var(--dim);text-decoration:none;font-size:.9rem;transition:.2s}
-.mh-nav a:hover{color:var(--red)}
-.mh-nav a.book{border:1px solid var(--ink);padding:11px 22px;text-transform:uppercase;letter-spacing:1.8px;font-size:.68rem;color:var(--ink)}
-.mh-nav a.book:hover{background:var(--ink);color:var(--cream)}
-/* TICKER */
-.ticker{background:var(--ink);color:var(--cream);padding:12px 0;overflow:hidden;white-space:nowrap}
-.ticker span{display:inline-block;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;animation:tk 30s linear infinite}
-.ticker i{color:var(--gold);font-style:normal;margin:0 24px}
-@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* HERO */
-.hero{border-bottom:1px solid var(--rule)}
-.hero-band{height:min(54vh,450px);overflow:hidden}
-.hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:sepia(.3) contrast(1.02)}
-.hero-body{padding:58px 0 62px}
-.hero-body .wrap{display:grid;grid-template-columns:1.7fr 1fr;gap:60px}
-.orn{display:flex;align-items:center;gap:14px;margin-bottom:22px}
-.orn .ln{width:52px;height:1px;background:var(--gold)}
-.orn .dm{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
-.kicker{font-size:.66rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--red);margin-bottom:20px}
-.hero h1{font-size:clamp(2.5rem,6.5vw,5rem);line-height:1.02;margin-bottom:24px}
-.hero h1 i{font-style:italic;color:var(--red)}
-.deck{font-size:1.12rem;color:var(--dim);max-width:560px;font-style:italic}
-.hero-side{border-left:1px solid var(--rule);padding-left:34px;display:flex;flex-direction:column;justify-content:space-between}
-.sstat{margin-bottom:30px}
-.sstat .n{font-family:'Playfair Display';font-size:2.7rem;font-weight:900;line-height:1;color:var(--red)}
-.sstat .l{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:7px}
-.side-btn{display:block;text-align:center;background:var(--ink);color:var(--cream);padding:17px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:.72rem;transition:.25s}
-.side-btn:hover{background:var(--red)}
-/* SECTIONS */
-.sec{padding:80px 0}
-.sec-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.sec-head .k{font-size:.64rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
-.sec-head h2{font-size:clamp(1.9rem,4.5vw,3.1rem);line-height:1.05}
-.sec-head .note{color:var(--dim);font-size:.92rem;max-width:320px;font-style:italic}
-/* SERVICE GRID */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-.svc{padding:36px 28px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--cream);transition:.22s}
-.svc:hover{background:var(--paper)}
-.svc .n{font-family:'Playfair Display';font-size:.85rem;color:var(--gold);margin-bottom:4px;display:block;font-weight:900}
-.svc h3{font-size:1.3rem;margin-bottom:9px}
-.svc .d{color:var(--dim);font-size:.87rem;margin-bottom:4px;font-style:italic;}
-.svc .p{font-family:'Playfair Display';font-size:2rem;font-weight:900;color:var(--red)}
-.svc .t{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
-/* ABOUT */
-.about{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:80px 30px}
-.about img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:sepia(.25)}
-.about h2{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:22px}
-.about p{color:var(--dim);margin-bottom:16px;font-size:1.04rem}
-/* GALLERY */
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-.gal{aspect-ratio:1;overflow:hidden;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.gal img{width:100%;height:100%;object-fit:cover;filter:sepia(.28);transition:.5s}
-.gal:hover img{filter:sepia(0);transform:scale(1.05)}
-/* HOURS */
-.hours{background:var(--paper);border-top:1px solid var(--rule)}
-.hours .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:80px 30px}
-.hours h2{font-size:1.9rem;margin-bottom:24px}
-.hrow{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--rule);font-size:.93rem}
-.hrow .day{text-transform:uppercase;letter-spacing:1.5px;font-size:.68rem;color:var(--dim)}
-.hrow .cl{color:var(--red);font-style:italic}
-.cbox p{color:var(--dim);margin-bottom:16px;font-size:1rem}
-.cbox strong{color:var(--ink);font-weight:500;display:block;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-.cbox a{color:var(--red);text-decoration:none}
-.cbox a:hover{text-decoration:underline}
-footer{border-top:3px double var(--ink);padding:34px 0;text-align:center;font-size:.72rem;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase}
-@media(max-width:960px){
-.hero-body .wrap,.about .wrap,.hours .wrap{grid-template-columns:1fr}
-.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--rule);padding-top:32px}
-.svc-grid,.gal-grid{grid-template-columns:1fr 1fr}
-.mh-nav a:not(.book){display:none}
-.sec,.about .wrap,.hours .wrap{padding:56px 30px}
+svg{display:block}
+/* NAV simples, sem barra fixa - so um cabecalho */
+.head{padding:34px 0 26px;text-align:center;border-bottom:1px solid var(--rule)}
+.head .est{font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.head h1{font-size:clamp(2.2rem,5.5vw,3.4rem);letter-spacing:.5px}
+.head .links{margin-top:20px;display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+.head .links a{color:var(--dim);text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:2px}
+.head .links a:hover{color:var(--red)}
+/* INTRO com foto a esquerda estreita */
+.intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-bottom:1px solid var(--rule)}
+.intro .im{overflow:hidden}
+.intro .im img{width:100%;height:100%;object-fit:cover;filter:sepia(.3)}
+.intro .tx{padding:64px 50px;display:flex;flex-direction:column;justify-content:center}
+.orn{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.orn .ln{width:44px;height:1px;background:var(--gold)}
+.orn .dm{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.intro h2{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.1;margin-bottom:18px}
+.intro h2 i{color:var(--red)}
+.intro p{color:var(--dim);font-size:1.05rem}
+/* MENU - lista tipografica, o coracao da pagina */
+.menu{padding:70px 0}
+.menu .cap{text-align:center;margin-bottom:46px}
+.menu .cap .k{font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.menu .cap h2{font-size:2.3rem}
+.menu .cap .ln{width:50px;height:1px;background:var(--gold);margin:20px auto 0}
+.mlist{max-width:680px;margin:0 auto}
+.mi{padding:26px 0;border-bottom:1px dotted rgba(46,32,21,.35)}
+.mi:first-child{border-top:1px dotted rgba(46,32,21,.35)}
+.mi h3{font-size:1.35rem;margin-bottom:6px;display:flex;align-items:baseline;gap:12px}
+.mi h3 .n{font-family:'Playfair Display';font-size:.8rem;color:var(--gold);font-weight:900}
+.mi p{color:var(--dim);font-size:.96rem;font-style:italic}
+/* GALERIA em tira horizontal */
+.strip{padding:0 0 70px}
+.strip .cap{text-align:center;margin-bottom:32px}
+.strip .cap .k{font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+.strip .cap h2{font-size:2rem}
+.tira{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tira div{aspect-ratio:3/4;overflow:hidden}
+.tira img{width:100%;height:100%;object-fit:cover;filter:sepia(.35);transition:.5s}
+.tira div:hover img{filter:sepia(0);transform:scale(1.04)}
+/* HORARIOS em duas colunas com moldura */
+.hours{padding:0 0 70px}
+.hbox{border:1px solid var(--rule);background:var(--paper);padding:50px 46px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.hbox h2{font-size:1.7rem;margin-bottom:22px}
+.hbox .hsub{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.hr{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--rule);font-size:.92rem}
+.hr span:first-child{color:var(--dim);text-transform:uppercase;font-size:.7rem;letter-spacing:1.5px}
+.hr .cl{color:var(--red);font-style:italic}
+.cb p{color:var(--dim);margin-bottom:14px}
+.cb b{color:var(--ink);font-weight:500;display:block;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.cb a{color:var(--red);text-decoration:none}
+.cb a:hover{text-decoration:underline}
+.bt{display:inline-block;margin-top:12px;background:var(--ink);color:var(--cream);padding:15px 34px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:.7rem}
+.bt:hover{background:var(--red)}
+footer{text-align:center;padding:40px 0;font-size:.68rem;letter-spacing:2px;color:var(--dim);text-transform:uppercase;border-top:3px double var(--ink)}
+@media(max-width:820px){
+.intro{grid-template-columns:1fr}
+.intro .im{height:260px}
+.intro .tx{padding:44px 26px}
+.tira{grid-template-columns:repeat(2,1fr)}
+.hbox{grid-template-columns:1fr;padding:36px 26px;gap:36px}
+.menu,.strip,.hours{padding-bottom:48px}
+.menu{padding-top:48px}
 }
-@media(max-width:560px){.svc-grid,.gal-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="masthead"><div class="wrap">
-<a href="#" class="brand">Barbearia Arend<small>Novo Hamburgo &middot; RS</small></a>
-<div class="mh-nav"><a href="#casa">A casa</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#horarios">Horários</a><a href="https://wa.me/5551991336843" class="book">Agendar</a></div>
-</div></div>
+<div class="wrap">
+<div class="head">
+<div class="est">Novo Hamburgo &middot; RS</div>
+<h1>Barbearia Arend</h1>
+<div class="links"><a href="#casa">A casa</a><a href="#servi&ccedil;os">Servi&ccedil;os</a><a href="#galeria">Galeria</a><a href="#hor&aacute;rios">Hor&aacute;rios</a></div>
+</div>
+</div>
 
-<div class="ticker"><span>TESOURA <i>&#9670;</i> NAVALHA <i>&#9670;</i> CENTRO DE NH <i>&#9670;</i> SEGUNDA A SÁBADO <i>&#9670;</i> TESOURA <i>&#9670;</i> NAVALHA <i>&#9670;</i> CENTRO DE NH <i>&#9670;</i> SEGUNDA A SÁBADO <i>&#9670;</i></span></div>
-
-<section class="hero">
-<div class="hero-band"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1600&q=80" alt="Cadeira e espelho de barbearia clássica"></div>
-<div class="hero-body"><div class="wrap">
-<div>
-<div class="orn"><span class="ln"></span><span class="dm"></span><span class="ln"></span></div>
-<div class="kicker">Centro &middot; Novo Hamburgo</div>
-<h1>O clássico que<br><i>nunca sai de moda</i></h1>
-<p class="deck">No coração do Centro de Novo Hamburgo, a Barbearia Arend mantém viva a arte da barbearia de verdade. Tesoura, navalha e conversa boa.</p>
+<section class="intro" id="casa">
+<div class="im"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1000&q=80" alt="Cadeira de barbearia"></div>
+<div class="tx">
+<div class="orn"><span class="ln"></span><span class="dm"></span></div>
+<h2>O cl&aacute;ssico que<br><i>nunca sai de moda</i></h2>
+<p>No Centro de Novo Hamburgo, a Arend atende de segunda a sabado com pausa pro almoco. Corte na tesoura e na m&aacute;quina, barba na navalha. Nota 4.8 no Google com 114 avalia&ccedil;&otilde;es.</p>
 </div>
-<div class="hero-side">
-<div>
-<div class="sstat"><div class="n">4.8</div><div class="l">Nota no Google</div></div>
-<div class="sstat"><div class="n">114</div><div class="l">Avaliações</div></div>
-<div class="sstat"><div class="n">06</div><div class="l">Dias por semana</div></div>
-</div>
-<a href="https://wa.me/5551991336843" class="side-btn">Agendar horário</a>
-</div>
-</div></div>
 </section>
 
-<section class="sec" id="casa"><div class="wrap">
-<div class="sec-head"><div><span class="k">A casa</span><h2>Barbearia de verdade</h2></div>
-<p class="note">No Centro de Novo Hamburgo, com nota 4.8 no Google.</p></div>
-<p style="color:var(--dim);max-width:780px;font-size:1.06rem">No Centro de Novo Hamburgo, a Barbearia Arend atende de segunda a sábado, com pausa pro almoço. Corte na tesoura e na máquina, barba na navalha. Nota 4.8 no Google com 114 avaliações.</p>
-</div></section>
-
-<section class="sec" id="servicos" style="background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><div class="wrap">
-<div class="sec-head"><div><span class="k">Nossa mesa</span><h2>Serviços</h2></div></div>
-<div class="svc-grid">
-<div class="svc"><span class="n">01</span><h3>Corte</h3><p class="d">Tesoura e máquina, do clássico ao moderno</p></div>
-<div class="svc"><span class="n">02</span><h3>Barba</h3><p class="d">Navalha, toalha quente e finalização</p></div>
-<div class="svc"><span class="n">03</span><h3>Corte + Barba</h3><p class="d">O serviço completo da casa</p></div>
+<section class="menu" id="servi&ccedil;os"><div class="wrap">
+<div class="cap"><span class="k">Nossa mesa</span><h2>Servi&ccedil;os</h2><div class="ln"></div></div>
+<div class="mlist">
+<div class="mi"><h3><span class="n">01</span> Corte</h3><p>Tesoura e m&aacute;quina, do cl&aacute;ssico ao moderno</p></div>
+<div class="mi"><h3><span class="n">02</span> Barba</h3><p>Navalha, toalha quente e finaliza&ccedil;&atilde;o</p></div>
+<div class="mi"><h3><span class="n">03</span> Corte + Barba</h3><p>O servico completo da casa</p></div>
 </div>
 </div></section>
 
-<section class="sec" id="galeria"><div class="wrap">
-<div class="sec-head"><div><span class="k">O ofício</span><h2>Galeria</h2></div></div>
-<div class="gal-grid">
-<div class="gal"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="Tesoura"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=80" alt="Navalha"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=800&q=80" alt="Detalhe"></div>
+<section class="strip" id="galeria"><div class="wrap">
+<div class="cap"><span class="k">O oficio</span><h2>Galeria</h2></div>
+<div class="tira">
+<div><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=700&q=80" alt="Tesoura"></div>
+<div><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=700&q=80" alt="Navalha"></div>
+<div><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=700&q=80" alt="Barbeiro"></div>
+<div><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80" alt="Detalhe"></div>
 </div>
 </div></section>
 
-<section class="hours" id="horarios"><div class="wrap">
+<section class="hours" id="hor&aacute;rios"><div class="wrap">
+<div class="hbox">
 <div>
-<h2>Horários</h2>
-<div class="hrow"><span class="day">Segunda</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Terça</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Quarta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Quinta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Sexta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Sábado</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
-<div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
+<h2>Hor&aacute;rios</h2><span class="hsub">Segunda a sabado</span>
+<div class="hr"><span>Segunda</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>Ter&ccedil;a</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>Quarta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>Quinta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>Sexta</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>S&aacute;bado</span><span>08:00 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="hr"><span>Domingo</span><span class="cl">Fechado</span></div>
 </div>
-<div class="cbox">
-<h2>Contato</h2>
-<p><strong>Endereço</strong>Av. Pedro Adams Filho, 3324 &mdash; Centro<br>Novo Hamburgo / RS</p>
-<p><strong>WhatsApp</strong><a href="https://wa.me/5551991336843">(51) 99133-6843</a></p>
-<p><strong>Google</strong>4.8 &#9733; &middot; 114 avaliações</p>
+<div class="cb">
+<h2>Contato</h2><span class="hsub">Venha nos visitar</span>
+<p><b>Endere&ccedil;o</b>Av. Pedro Adams Filho, 3324 &mdash; Centro<br>Novo Hamburgo / RS</p>
+<p><b>WhatsApp</b><a href="https://wa.me/5551991336843">(51) 99133-6843</a></p>
+<p><b>Google</b>4.8 estrelas &middot; 114 avalia&ccedil;&otilde;es</p>
+<a href="https://wa.me/5551991336843" class="bt">Agendar</a>
+</div>
 </div>
 </div></section>
 
-<footer><div class="wrap">Barbearia Arend &middot; Centro, Novo Hamburgo/RS &middot; &copy; 2026</div></footer>
+<footer>Barbearia Arend &middot; Centro, Novo Hamburgo/RS</footer>
 </body>
 </html>

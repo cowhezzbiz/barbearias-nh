@@ -3,196 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MaisQ Barber Club | A barbearia mais bem avaliada de Novo Hamburgo</title>
-<meta name="description" content="MaisQ Barber Club no Centro de Novo Hamburgo. 609 avaliações e nota 5.0 no Google. Atendimento premium e agendamento pelo WhatsApp.">
+<title>MaisQ Barber Club | Centro de Novo Hamburgo</title>
+<meta name="description" content="MaisQ Barber Club no Centro de Novo Hamburgo. Corte, barba e sobrancelha. Nota 5.0 no Google com 609 avalia&ccedil;&otilde;es.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b1017;--panel:#121a24;--panel2:#18222f;--mint:#3ddc97;--mint-d:#2bb87c;--ink:#e8eef5;--dim:#7f8fa3;--line:rgba(61,220,151,.15)}
+:root{--bg:#0a0f16;--card:#121a26;--card2:#18222f;--mint:#3ddc97;--ink:#e9eff7;--dim:#7b8b9f;--line:rgba(61,220,151,.16)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;overflow-x:hidden}
-.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:'Bebas Neue';font-weight:400;letter-spacing:1.5px}
 svg{display:block}
-h1,h2,h3,.dsp{font-family:'Bebas Neue';font-weight:400;letter-spacing:1px}
-/* MASTHEAD */
-.masthead{position:sticky;top:0;z-index:70;background:rgba(11,16,23,.92);backdrop-filter:blur(18px);border-bottom:2px solid var(--mint)}
-.masthead .wrap{display:flex;justify-content:space-between;align-items:center;height:82px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand .mk{width:42px;height:42px;background:linear-gradient(135deg,var(--mint),var(--mint-d));border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.6rem;color:#0b1017}
-.brand .nm{font-family:'Bebas Neue';font-size:1.75rem;letter-spacing:1.5px;color:var(--ink)}
-.brand .nm span{color:var(--mint)}
-.mh-nav{display:flex;gap:26px;align-items:center}
-.mh-nav a{color:var(--dim);text-decoration:none;font-size:.9rem;font-weight:500;transition:.2s}
-.mh-nav a:hover{color:var(--mint)}
-.mh-nav a.book{background:var(--mint);color:#0b1017;padding:12px 22px;border-radius:9px;font-weight:700;font-size:.86rem}
-.mh-nav a.book:hover{background:#fff;color:#0b1017}
-/* TICKER */
-.ticker{background:var(--mint);color:#0b1017;padding:12px 0;overflow:hidden;white-space:nowrap}
-.ticker span{display:inline-block;font-family:'Bebas Neue';font-size:1.05rem;letter-spacing:3px;animation:tk 30s linear infinite}
-.ticker b{margin:0 26px}
-@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* HERO */
-.hero{border-bottom:1px solid var(--line)}
-.hero-band{height:min(52vh,430px);position:relative;overflow:hidden}
-.hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.4}
-.hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,16,23,.3),rgba(11,16,23,.96))}
-.hero-body{padding:60px 0 64px}
-.hero-body .wrap{display:grid;grid-template-columns:1.7fr 1fr;gap:60px}
-.kicker{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:700;margin-bottom:20px}
-.hero h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.94;margin-bottom:24px}
+/* NAV minimalista no topo (nao fixa) */
+.nav{padding:26px 0;display:flex;align-items:center;justify-content:space-between}
+.nav .lg{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nav .lg .mk{width:38px;height:38px;background:linear-gradient(135deg,var(--mint),#2bb87c);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.4rem;color:#0a0f16}
+.nav .lg .nm{font-family:'Bebas Neue';font-size:1.55rem;letter-spacing:2px;color:var(--ink)}
+.nav .lg .nm span{color:var(--mint)}
+.nav .lk{display:flex;gap:26px;align-items:center}
+.nav .lk a{color:var(--dim);text-decoration:none;font-size:.88rem;font-weight:500;transition:.2s}
+.nav .lk a:hover{color:var(--mint)}
+.nav .lk a.cta{background:var(--mint);color:#0a0f16;padding:11px 20px;border-radius:9px;font-weight:700;font-size:.84rem}
+.nav .lk a.cta:hover{background:#fff}
+/* HERO CENTRALIZADO */
+.hero{padding:60px 0 0;text-align:center;position:relative}
+.hero .glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(61,220,151,.16),transparent 68%);pointer-events:none}
+.hero .in{position:relative}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(61,220,151,.1);border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:.76rem;font-weight:600;color:var(--mint);margin-bottom:26px}
+.hero h1{font-size:clamp(3.2rem,10vw,7rem);line-height:.9;margin-bottom:22px}
 .hero h1 span{color:var(--mint)}
-.deck{color:var(--dim);font-size:1.08rem;max-width:560px}
-.hero-side{border-left:1px solid var(--line);padding-left:34px;display:flex;flex-direction:column;justify-content:space-between}
-.sstat{margin-bottom:28px}
-.sstat .n{font-family:'Bebas Neue';font-size:3.2rem;line-height:1;color:var(--mint)}
-.sstat .l{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);font-weight:600;margin-top:5px}
-.side-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--mint);color:#0b1017;padding:18px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.9rem;transition:.22s}
-.side-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(61,220,151,.3)}
-/* SECTIONS */
-.sec{padding:84px 0}
-.sec-head{margin-bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.sec-head .k{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:700;display:block;margin-bottom:14px}
-.sec-head h2{font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1}
-.sec-head .note{color:var(--dim);font-size:.92rem;max-width:330px}
-/* SERVICE GRID */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.svc{padding:36px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s;background:var(--bg)}
-.svc:hover{background:var(--panel2)}
-.svc .n{font-family:'Bebas Neue';font-size:1.1rem;color:var(--mint);margin-bottom:16px;display:block;letter-spacing:2px}
-.svc h3{font-size:1.5rem;margin-bottom:6px}
-.svc .d{color:var(--dim);font-size:.86rem;margin-bottom:4px;}
-.svc .p{font-family:'Bebas Neue';font-size:2.4rem;color:var(--mint)}
-.svc .t{font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);font-weight:600}
-/* PERKS */
-.perks-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.perk{padding:32px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s}
-.perk:hover{background:var(--panel)}
-.perk .ic{width:44px;height:44px;background:rgba(61,220,151,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mint);margin-bottom:18px}
-.perk h3{font-size:1.25rem;margin-bottom:8px}
-.perk p{color:var(--dim);font-size:.86rem}
-/* ABOUT */
-.about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:84px 28px}
-.about img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}
-.about h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:4px;line-height:1.02}
-.about p{color:var(--dim);margin-bottom:16px}
-/* GALLERY */
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.gal{aspect-ratio:1;overflow:hidden;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
-.gal img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:.45s}
-.gal:hover img{transform:scale(1.05);filter:saturate(1)}
-/* REVIEWS */
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.rev{padding:32px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.rev .stars{color:var(--mint);letter-spacing:3px;margin-bottom:15px}
-.rev p{color:#b9c4d2;font-size:.94rem;margin-bottom:20px}
-.rev .who{font-weight:700;font-size:.85rem;color:var(--mint)}
-/* HOURS */
-.hours{background:var(--panel);border-top:1px solid var(--line)}
-.hours .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:84px 28px}
-.hours h2{font-size:2.4rem;margin-bottom:26px}
-.hrow{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line);font-size:.94rem}
-.hrow .day{color:var(--dim);text-transform:uppercase;font-size:.7rem;letter-spacing:2px;font-weight:600}
-.hrow .cl{color:var(--mint)}
-.cbox .li{display:flex;gap:16px;margin-bottom:26px;align-items:flex-start}
-.cbox .li .ic{width:46px;height:46px;background:rgba(61,220,151,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mint);flex-shrink:0}
-.cbox .li h4{font-size:.66rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);font-weight:700;margin-bottom:4px}
-.cbox .li p{font-size:1rem}
-.cbox .li a{color:var(--mint);text-decoration:none}
-.cbox .li a:hover{text-decoration:underline}
-footer{border-top:2px solid var(--mint);padding:34px 0;text-align:center;font-size:.72rem;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase}
-@media(max-width:960px){
-.hero-body .wrap,.about .wrap,.hours .wrap{grid-template-columns:1fr}
-.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:32px}
-.svc-grid,.perks-grid,.rev-grid{grid-template-columns:1fr 1fr}
-.gal-grid{grid-template-columns:1fr 1fr}
-.mh-nav a:not(.book){display:none}
-.sec,.about .wrap,.hours .wrap{padding:56px 28px}
+.hero p{color:var(--dim);font-size:1.08rem;max-width:520px;margin:0 auto 32px}
+.hero .btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+.hero .btns a.p{background:var(--mint);color:#0a0f16;padding:16px 30px;border-radius:11px;text-decoration:none;font-weight:700;font-size:.92rem;display:inline-flex;align-items:center;gap:9px;transition:.22s}
+.hero .btns a.p:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(61,220,151,.3)}
+.hero .btns a.s{border:1px solid var(--line);color:var(--ink);padding:16px 30px;border-radius:11px;text-decoration:none;font-weight:600;font-size:.92rem}
+.hero .btns a.s:hover{border-color:var(--mint);color:var(--mint)}
+/* FOTO grande em arco */
+.arch{width:min(760px,92%);margin:0 auto;height:min(58vh,460px);border-radius:380px 380px 22px 22px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.62}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,15,22,.92))}
+.arch .badge{position:absolute;bottom:0;left:0;right:0;padding:30px;z-index:2;display:flex;justify-content:center;gap:44px}
+.arch .badge div .n{font-family:'Bebas Neue';font-size:2.6rem;color:var(--mint);line-height:1}
+.arch .badge div .l{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:5px}
+/* CARDS flutuantes sobrepostos */
+.cards{margin-top:-70px;position:relative;z-index:5;padding-bottom:70px}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cd{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:28px 22px;transition:.26s;text-align:center}
+.cd:hover{transform:translateY(-7px);border-color:var(--mint)}
+.cd .ic{width:50px;height:50px;margin:0 auto 18px;background:rgba(61,220,151,.12);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--mint)}
+.cd h3{font-size:1.3rem;margin-bottom:7px}
+.cd p{color:var(--dim);font-size:.85rem}
+/* PERKS em linha */
+.perks{padding:0 0 80px}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pk{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;transition:.24s}
+.pk:hover{background:var(--card2);transform:translateY(-4px)}
+.pk .n{font-family:'Bebas Neue';font-size:2rem;color:var(--mint);line-height:1}
+.pk .l{font-size:.84rem;color:var(--dim);margin-top:8px}
+/* GALERIA tira */
+.gal{padding:0 0 80px}
+.gal h2{font-size:clamp(2rem,5vw,3.2rem);text-align:center;margin-bottom:32px}
+.gt{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gt div{aspect-ratio:4/5;overflow:hidden;border-radius:16px;background:var(--card)}
+.gt img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:saturate(.85)}
+.gt div:hover img{transform:scale(1.06);filter:saturate(1)}
+/* INFO em card grande */
+.info{padding:0 0 80px}
+.ibox{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.ibox h3{font-size:1.7rem;margin-bottom:24px}
+.hr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.hr span:first-child{color:var(--dim);font-size:.7rem;text-transform:uppercase;letter-spacing:1.6px}
+.hr .cl{color:var(--mint)}
+.cb .li{display:flex;gap:15px;margin-bottom:22px;align-items:flex-start}
+.cb .li .ic{width:44px;height:44px;background:rgba(61,220,151,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mint);flex-shrink:0}
+.cb .li h4{font-size:.64rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin-bottom:3px;font-family:'Sora'}
+.cb .li p{font-size:.98rem}
+.cb .li a{color:var(--mint);text-decoration:none}
+.cb .li a:hover{text-decoration:underline}
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;font-size:.72rem;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase}
+@media(max-width:900px){
+.nav .lk a:not(.cta){display:none}
+.arch{border-radius:200px 200px 20px 20px;height:340px}
+.arch .badge{gap:26px;padding:20px}
+.cgrid,.pgrid{grid-template-columns:1fr 1fr}
+.gt{grid-template-columns:1fr 1fr}
+.ibox{grid-template-columns:1fr;padding:34px 26px;gap:34px}
+.cards{margin-top:-40px}
 }
-@media(max-width:560px){.svc-grid,.perks-grid,.rev-grid,.gal-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.cgrid,.pgrid,.gt{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="masthead"><div class="wrap">
-<a href="#" class="brand"><span class="mk">Q</span><span class="nm">MAIS<span>Q</span></span></a>
-<div class="mh-nav"><a href="#clube">O Clube</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#horarios">Horários</a><a href="https://wa.me/5551983177712" class="book">Agendar</a></div>
-</div></div>
-
-<div class="ticker"><span>609 AVALIAÇÕES <b>&#9670;</b> NOTA 5.0 <b>&#9670;</b> CENTRO DE NH <b>&#9670;</b> ATENDIMENTO PREMIUM <b>&#9670;</b> 609 AVALIAÇÕES <b>&#9670;</b> NOTA 5.0 <b>&#9670;</b> CENTRO DE NH <b>&#9670;</b> ATENDIMENTO PREMIUM <b>&#9670;</b></span></div>
+<div class="wrap">
+<nav class="nav">
+<a href="#" class="lg"><span class="mk">Q</span><span class="nm">MAIS<span>Q</span></span></a>
+<div class="lk"><a href="#servi&ccedil;os">Servi&ccedil;os</a><a href="#galeria">Galeria</a><a href="#hor&aacute;rios">Hor&aacute;rios</a><a href="https://wa.me/5551983177712" class="cta">Agendar</a></div>
+</nav>
+</div>
 
 <section class="hero">
-<div class="hero-band"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80" alt="Barbeiro trabalhando"></div>
-<div class="hero-body"><div class="wrap">
-<div>
-<div class="kicker">A mais bem avaliada de Novo Hamburgo</div>
+<div class="glow"></div>
+<div class="wrap"><div class="in">
+<div class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg> A mais bem avaliada de Novo Hamburgo</div>
 <h1>MAIS QUE UMA<br><span>BARBEARIA</span></h1>
-<p class="deck">Um clube para quem não aceita menos que o melhor. Atendimento exclusivo, ambiente premium e o padrão MaisQ em cada detalhe.</p>
-</div>
-<div class="hero-side">
-<div>
-<div class="sstat"><div class="n">5.0</div><div class="l">Nota no Google</div></div>
-<div class="sstat"><div class="n">609</div><div class="l">Avaliações</div></div>
-<div class="sstat"><div class="n">604</div><div class="l">Avaliações 5 estrelas</div></div>
-</div>
-<a href="https://wa.me/5551983177712" class="side-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar agora</a>
+<p>No Centro de Novo Hamburgo. Corte, barba e sobrancelha com atendimento no horario marcado. Nota 5.0 no Google com 609 avalia&ccedil;&otilde;es.</p>
+<div class="btns">
+<a href="https://wa.me/5551983177712" class="p"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar agora</a>
+<a href="#servi&ccedil;os" class="s">Ver servi&ccedil;os</a>
 </div>
 </div></div>
+<div class="arch">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=80" alt="Barbeiro trabalhando">
+<div class="badge">
+<div><div class="n">5.0</div><div class="l">Nota no Google</div></div>
+<div><div class="n">609</div><div class="l">Avalia&ccedil;&otilde;es</div></div>
+<div><div class="n">604</div><div class="l">5 estrelas</div></div>
+</div>
+</div>
 </section>
 
-<section class="sec" id="clube"><div class="wrap">
-<div class="sec-head"><div><span class="k">O Clube</span><h2>POR QUE O MAISQ</h2></div></div>
-<div class="perks-grid">
-<div class="perk"><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><h3>609 avaliações</h3><p>A barbearia mais bem avaliada de Novo Hamburgo, com nota 5.0.</p></div>
-<div class="perk"><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.7-5 3.7 1.9-5.8L4 8.8h6.1z"/></svg></div><h3>Experiência premium</h3><p>Ambiente exclusivo, atendimento personalizado e produtos de alto padrão.</p></div>
-<div class="perk"><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>No coração da cidade</h3><p>Localização privilegiada no Centro de Novo Hamburgo.</p></div>
-<div class="perk"><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Sem espera</h3><p>Agendamento online e atendimento pontual, no seu horário.</p></div>
+<section class="cards" id="servi&ccedil;os"><div class="wrap">
+<div class="cgrid">
+<div class="cd"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg></div><h3>Corte</h3><p>T&eacute;cnicas modernas e classicas</p></div>
+<div class="cd"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M6.5 6.5l11 11M4 20l4-4"/></svg></div><h3>Barba</h3><p>Toalha quente e navalha</p></div>
+<div class="cd"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><h3>Corte + Barba</h3><p>A experi&ecirc;ncia completa</p></div>
+<div class="cd"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Sobrancelha</h3><p>Design masculino</p></div>
 </div>
 </div></section>
 
-<section class="sec" id="servicos" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-<div class="sec-head"><div><span class="k">Serviços</span><h2>O QUE OFERECEMOS</h2></div></div>
-<div class="svc-grid">
-<div class="svc"><span class="n">01</span><h3>Corte</h3><p class="d">Técnicas modernas e clássicas com acabamento impecável</p></div>
-<div class="svc"><span class="n">02</span><h3>Barba</h3><p class="d">Modelagem completa com toalha quente e navalha</p></div>
-<div class="svc"><span class="n">03</span><h3>Corte + Barba</h3><p class="d">A experiência MaisQ completa, do início ao fim</p></div>
-<div class="svc"><span class="n">04</span><h3>Sobrancelha</h3><p class="d">Design masculino que valoriza o rosto</p></div>
+<section class="perks"><div class="wrap">
+<div class="pgrid">
+<div class="pk"><div class="n">609</div><div class="l">Avalia&ccedil;&otilde;es no Google</div></div>
+<div class="pk"><div class="n">604</div><div class="l">Notas 5 estrelas</div></div>
+<div class="pk"><div class="n">06</div><div class="l">Dias por semana</div></div>
+<div class="pk"><div class="n">5.0</div><div class="l">Nota maxima</div></div>
 </div>
 </div></section>
 
-<section class="sec" id="galeria"><div class="wrap">
-<div class="sec-head"><div><span class="k">Galeria</span><h2>O NOSSO PADRÃO</h2></div></div>
-<div class="gal-grid">
-<div class="gal"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Corte"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="Tesoura"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Barba"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=800&q=80" alt="Barbeiro"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80" alt="Detalhe"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=80" alt="Navalha"></div>
+<section class="gal" id="galeria"><div class="wrap">
+<h2>O NOSSO PADRAO</h2>
+<div class="gt">
+<div><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Corte"></div>
+<div><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="Tesoura"></div>
+<div><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Barba"></div>
 </div>
 </div></section>
 
-
-
-<section class="hours" id="horarios"><div class="wrap">
+<section class="info" id="hor&aacute;rios"><div class="wrap">
+<div class="ibox">
 <div>
-<h2>HORÁRIOS</h2>
-<div class="hrow"><span class="day">Segunda</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Terça</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Quarta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Quinta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Sexta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Sábado</span><span>08:00 &mdash; 18:00</span></div>
-<div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
+<h3>Hor&aacute;rios</h3>
+<div class="hr"><span>Segunda</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Ter&ccedil;a</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Quarta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Quinta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Sexta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>S&aacute;bado</span><span>08:00 &mdash; 18:00</span></div>
+<div class="hr"><span>Domingo</span><span class="cl">Fechado</span></div>
 </div>
-<div class="cbox">
-<h2>CONTATO</h2>
-<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Endereço</h4><p>R. Cinco de Abril, 608 &mdash; Sala 3<br>Centro &middot; Novo Hamburgo / RS</p></div></div>
+<div class="cb" id="contato">
+<h3>Contato</h3>
+<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Endere&ccedil;o</h4><p>R. Cinco de Abril, 608 &mdash; Sala 3<br>Centro &middot; Novo Hamburgo / RS</p></div></div>
 <div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>WhatsApp</h4><p><a href="https://wa.me/5551983177712">(51) 98317-7712</a></p></div></div>
-<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><div><h4>Google</h4><p>5.0 &#9733; &middot; 609 avaliações</p></div></div>
+</div>
 </div>
 </div></section>
 
-<footer><div class="wrap">MaisQ Barber Club &middot; Centro, Novo Hamburgo/RS &middot; &copy; 2026</div></footer>
+<footer>MaisQ Barber Club &middot; Centro, Novo Hamburgo/RS</footer>
 </body>
 </html>

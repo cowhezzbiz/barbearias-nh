@@ -3,180 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Mafia Barbearia | Barbearia no Centro de Novo Hamburgo</title>
-<meta name="description" content="La Mafia Barbearia no Centro de Novo Hamburgo. Cortes impecáveis, barbas desenhadas e ambiente premium. Nota 4.8 com mais de 300 avaliações.">
+<title>La Mafia Barbearia | Centro de Novo Hamburgo</title>
+<meta name="description" content="La Mafia Barbearia no Centro de Novo Hamburgo. Corte, barba e sobrancelha. Nota 4.8 no Google com 301 avalia&ccedil;&otilde;es.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#08080a;--panel:#101014;--panel2:#15151b;--gold:#c9a227;--gold-l:#e5c65c;--ink:#ece9e2;--dim:#8a8578;--line:rgba(201,162,39,.18)}
+:root{--bg:#070709;--panel:#0f0f13;--gold:#c9a227;--gold-l:#e5c65c;--ink:#ece9e2;--dim:#877f6d;--line:rgba(201,162,39,.2)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;overflow-x:hidden}
-.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
-svg{display:block}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:700}
-/* MASTHEAD */
-.masthead{position:sticky;top:0;z-index:70;background:rgba(8,8,10,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold)}
-.masthead .wrap{display:flex;justify-content:space-between;align-items:center;height:80px}
-.brand{font-family:'Cormorant Garamond';font-size:1.8rem;font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:.5px}
-.brand b{color:var(--gold)}
-.mh-nav{display:flex;gap:26px;align-items:center}
-.mh-nav a{color:var(--dim);text-decoration:none;font-size:.9rem;transition:.2s}
-.mh-nav a:hover{color:var(--gold)}
-.mh-nav a.book{border:1px solid var(--gold);color:var(--gold);padding:11px 22px;font-size:.72rem;text-transform:uppercase;letter-spacing:1.8px}
-.mh-nav a.book:hover{background:var(--gold);color:#08080a}
-/* TICKER */
-.ticker{background:var(--panel);border-bottom:1px solid var(--line);padding:13px 0;overflow:hidden;white-space:nowrap}
-.ticker span{display:inline-block;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);animation:tk 32s linear infinite}
-.ticker i{color:var(--dim);font-style:normal;margin:0 26px}
-@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* HERO */
-.hero{border-bottom:1px solid var(--line)}
-.hero-band{height:min(54vh,450px);position:relative;overflow:hidden}
-.hero-band img{width:100%;height:100%;object-fit:cover;opacity:.5}
-.hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.3),rgba(8,8,10,.95))}
-.hero-body{padding:60px 0 64px}
-.hero-body .wrap{display:grid;grid-template-columns:1.7fr 1fr;gap:60px}
-.crest{width:52px;height:52px;border:1px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-bottom:26px}
-.crest span{transform:rotate(-45deg);font-family:'Cormorant Garamond';font-size:1.3rem;color:var(--gold);font-weight:700}
-.kicker{font-size:.66rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:1;margin-bottom:24px}
-.hero h1 em{font-style:italic;color:var(--gold-l)}
-.deck{color:#b8b2a4;font-size:1.1rem;max-width:560px;font-weight:300}
-.hero-side{border-left:1px solid var(--line);padding-left:34px;display:flex;flex-direction:column;justify-content:space-between}
-.sstat{margin-bottom:30px}
-.sstat .n{font-family:'Cormorant Garamond';font-size:2.8rem;font-weight:700;line-height:1;color:var(--gold)}
-.sstat .l{font-size:.66rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);margin-top:7px}
-.side-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#08080a;padding:18px;text-decoration:none;font-size:.76rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;transition:.25s}
-.side-btn:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(201,162,39,.3)}
-/* SECTIONS */
-.sec{padding:84px 0}
-.sec-head{margin-bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.sec-head .k{font-size:.66rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
-.sec-head h2{font-size:clamp(2rem,5vw,3.3rem);line-height:1.02}
-.sec-head .note{color:var(--dim);font-size:.92rem;max-width:330px;font-weight:300}
-/* SERVICE GRID */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.svc{padding:38px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s;background:var(--bg);position:relative}
-.svc::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:.4s}
-.svc:hover{background:var(--panel2)}
-.svc:hover::after{transform:scaleX(1)}
-.svc .n{font-family:'Cormorant Garamond';font-size:.9rem;color:var(--gold);margin-bottom:4px;display:block;font-weight:700}
-.svc h3{font-size:1.45rem;margin-bottom:8px}
-.svc .d{color:#b8b2a4;font-size:.88rem;margin-bottom:4px;font-weight:300}
-.svc .p{font-family:'Cormorant Garamond';font-size:2rem;font-weight:700;color:var(--gold)}
-.svc .t{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
-/* ABOUT */
-.about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:84px 28px}
-.about img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:contrast(1.08) saturate(.88)}
-.about h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:22px}
-.about p{color:#b8b2a4;margin-bottom:16px;font-weight:300}
-/* GALLERY */
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.gal{aspect-ratio:1;overflow:hidden;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
-.gal img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.05);transition:.55s}
-.gal:hover img{filter:grayscale(0);transform:scale(1.05)}
-/* HOURS */
-.hours{background:var(--panel);border-top:1px solid var(--line)}
-.hours .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:84px 28px}
-.hours h2{font-size:2rem;margin-bottom:28px}
-.hrow{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:.94rem;font-weight:300}
-.hrow .day{color:var(--dim);text-transform:uppercase;font-size:.7rem;letter-spacing:2px}
-.hrow .cl{color:var(--gold)}
-.cbox .li{display:flex;gap:18px;margin-bottom:26px;align-items:flex-start}
-.cbox .li .ic{width:46px;height:46px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
-.cbox .li h4{font-size:.66rem;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:5px}
-.cbox .li p{font-size:1rem}
-.cbox .li a{color:var(--gold-l);text-decoration:none}
-.cbox .li a:hover{text-decoration:underline}
-footer{border-top:1px solid var(--gold);padding:36px 0;text-align:center;font-size:.7rem;letter-spacing:2px;color:var(--dim);text-transform:uppercase}
-@media(max-width:960px){
-.hero-body .wrap,.about .wrap,.hours .wrap{grid-template-columns:1fr}
-.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:32px}
-.svc-grid{grid-template-columns:1fr 1fr}
-.gal-grid{grid-template-columns:1fr 1fr}
-.mh-nav a:not(.book){display:none}
-.sec,.about .wrap,.hours .wrap{padding:56px 28px}
+svg{display:block}
+/* SPLIT: metade esquerda FIXA com foto, direita rola */
+.split{display:grid;grid-template-columns:44% 56%}
+.left{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--panel)}
+.left img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.left::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,9,.5),rgba(7,7,9,.94))}
+.left .over{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:48px 44px}
+.left .top .crest{width:48px;height:48px;border:1px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-bottom:26px}
+.left .top .crest span{transform:rotate(-45deg);font-family:'Cormorant Garamond';font-size:1.2rem;color:var(--gold);font-weight:700}
+.left .top .nm{font-family:'Cormorant Garamond';font-size:2rem;font-weight:700}
+.left .top .nm b{color:var(--gold)}
+.left .top .sb{font-size:.66rem;letter-spacing:4px;text-transform:uppercase;color:var(--dim);margin-top:8px}
+.left .bot .st{display:flex;gap:30px;margin-bottom:22px}
+.left .bot .st div .n{font-family:'Cormorant Garamond';font-size:2.2rem;color:var(--gold);line-height:1;font-weight:700}
+.left .bot .st div .l{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.left .bot a{display:flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#070709;padding:16px;text-decoration:none;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:.25s}
+.left .bot a:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(201,162,39,.3)}
+/* DIREITA */
+.right .sec{padding:64px 54px;border-bottom:1px solid var(--line)}
+.right .sec:last-child{border-bottom:none}
+.right .k{font-size:.64rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+.right h2{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.06;margin-bottom:20px}
+.right h2 em{font-style:italic;color:var(--gold-l)}
+.right p.lead{color:#b5ae9e;font-size:1.04rem;font-weight:300}
+/* NAV em lista vertical */
+.navlist{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.navlist a{color:var(--dim);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;transition:.2s;display:flex;justify-content:space-between}
+.navlist a:hover{color:var(--gold);padding-left:10px}
+/* SERVICOS em blocos grandes */
+.sv{display:flex;flex-direction:column;gap:0}
+.sv .it{padding:26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+.sv .it:last-child{border-bottom:none}
+.sv .it .nn{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--gold);line-height:1;font-weight:700;min-width:34px}
+.sv .it h3{font-size:1.45rem;margin-bottom:6px}
+.sv .it p{color:#b5ae9e;font-size:.93rem;font-weight:300}
+/* GALERIA 2x2 grande */
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gg div{aspect-ratio:1;overflow:hidden;background:var(--panel)}
+.gg img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.05);transition:.55s}
+.gg div:hover img{filter:grayscale(0);transform:scale(1.05)}
+/* HORARIOS */
+.hr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.93rem;font-weight:300}
+.hr span:first-child{color:var(--dim);text-transform:uppercase;font-size:.68rem;letter-spacing:2px}
+.hr .cl{color:var(--gold)}
+/* CONTATO */
+.cl{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}
+.cl .ic{width:44px;height:44px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
+.cl h4{font-size:.64rem;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:4px}
+.cl p{font-size:1rem}
+.cl a{color:var(--gold-l);text-decoration:none}
+.cl a:hover{text-decoration:underline}
+@media(max-width:900px){
+.split{grid-template-columns:1fr}
+.left{position:relative;height:auto;min-height:420px}
+.left .over{padding:36px 26px}
+.right .sec{padding:48px 26px}
+.gg{grid-template-columns:1fr 1fr}
 }
-@media(max-width:560px){.svc-grid,.gal-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="masthead"><div class="wrap">
-<a href="#" class="brand">La <b>Mafia</b></a>
-<div class="mh-nav"><a href="#casa">A casa</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#horarios">Horários</a><a href="https://wa.me/555132799540" class="book">Agendar</a></div>
-</div></div>
-
-<div class="ticker"><span>ESTILO <i>&#9670;</i> NAVALHA <i>&#9670;</i> TRADIÇÃO <i>&#9670;</i> CENTRO DE NH <i>&#9670;</i> ESTILO <i>&#9670;</i> NAVALHA <i>&#9670;</i> TRADIÇÃO <i>&#9670;</i> CENTRO DE NH <i>&#9670;</i></span></div>
-
-<section class="hero">
-<div class="hero-band"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1600&q=80" alt="Interior de barbearia"></div>
-<div class="hero-body"><div class="wrap">
-<div>
+<div class="split">
+<aside class="left">
+<img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1200&q=80" alt="Interior da barbearia">
+<div class="over">
+<div class="top">
 <div class="crest"><span>M</span></div>
-<div class="kicker">Novo Hamburgo &middot; RS</div>
-<h1>Estilo que impõe<br><em>respeito</em></h1>
-<p class="deck">Uma barbearia para quem entende que aparência é atitude. Cortes impecáveis, barbas desenhadas e um ambiente à altura.</p>
+<div class="nm">La <b>Mafia</b></div>
+<div class="sb">Novo Hamburgo &middot; RS</div>
 </div>
-<div class="hero-side">
-<div>
-<div class="sstat"><div class="n">4.8</div><div class="l">Nota no Google</div></div>
-<div class="sstat"><div class="n">301</div><div class="l">Avaliações</div></div>
-<div class="sstat"><div class="n">06</div><div class="l">Dias por semana</div></div>
+<div class="bot">
+<div class="st">
+<div><div class="n">4.8</div><div class="l">No Google</div></div>
+<div><div class="n">301</div><div class="l">Avalia&ccedil;&otilde;es</div></div>
 </div>
-<a href="https://wa.me/555132799540" class="side-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar horário</a>
+<a href="https://wa.me/555132799540"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar horario</a>
 </div>
-</div></div>
+</div>
+</aside>
+
+<main class="right">
+<section class="sec">
+<span class="k">A casa</span>
+<h2>Estilo que impoe<br><em>respeito</em></h2>
+<p class="lead">No Centro de Novo Hamburgo, a La Mafia atende de segunda a sabado. Corte, barba e sobrancelha, com acabamento na navalha. Nota 4.8 no Google com 301 avalia&ccedil;&otilde;es.</p>
+<nav class="navlist">
+<a href="#servi&ccedil;os">Servi&ccedil;os <span>&rarr;</span></a>
+<a href="#galeria">Galeria <span>&rarr;</span></a>
+<a href="#hor&aacute;rios">Hor&aacute;rios <span>&rarr;</span></a>
+<a href="#contato">Contato <span>&rarr;</span></a>
+</nav>
 </section>
 
-<section class="sec" id="casa"><div class="wrap">
-<div class="sec-head"><div><span class="k">A casa</span><h2>No Centro de Novo Hamburgo,<br>desde o primeiro dia</h2></div>
-<p class="note">No Centro de Novo Hamburgo, com nota 4.8 no Google.</p></div>
-<p style="color:#b8b2a4;max-width:780px;font-size:1.05rem;font-weight:300">No Centro de Novo Hamburgo, a La Mafia atende de segunda a sábado. Corte, barba e sobrancelha, com acabamento na navalha. Nota 4.8 no Google com 301 avaliações.</p>
-</div></section>
-
-<section class="sec" id="servicos" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-<div class="sec-head"><div><span class="k">Serviços</span><h2>Nossa arte</h2></div></div>
-<div class="svc-grid">
-<div class="svc"><span class="n">01</span><h3>Corte</h3><p class="d">Tesoura, máquina e acabamento na navalha</p></div>
-<div class="svc"><span class="n">02</span><h3>Barba</h3><p class="d">Modelagem com toalha quente e navalha</p></div>
-<div class="svc"><span class="n">03</span><h3>Corte + Barba</h3><p class="d">A experiência completa La Mafia</p></div>
-<div class="svc"><span class="n">04</span><h3>Sobrancelha</h3><p class="d">Design masculino na navalha</p></div>
+<section class="sec" id="servi&ccedil;os">
+<span class="k">Servi&ccedil;os</span>
+<div class="sv">
+<div class="it"><span class="nn">01</span><div><h3>Corte</h3><p>Tesoura, m&aacute;quina e acabamento na navalha</p></div></div>
+<div class="it"><span class="nn">02</span><div><h3>Barba</h3><p>Modelagem com toalha quente e navalha</p></div></div>
+<div class="it"><span class="nn">03</span><div><h3>Corte + Barba</h3><p>A experi&ecirc;ncia completa</p></div></div>
+<div class="it"><span class="nn">04</span><div><h3>Sobrancelha</h3><p>Design masculino na navalha</p></div></div>
 </div>
-</div></section>
+</section>
 
-<section class="sec" id="galeria"><div class="wrap">
-<div class="sec-head"><div><span class="k">Galeria</span><h2>O ofício</h2></div></div>
-<div class="gal-grid">
-<div class="gal"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Degradê"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="Tesoura"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Barba"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=800&q=80" alt="Barbeiro"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80" alt="Detalhe"></div>
-<div class="gal"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=80" alt="Navalha"></div>
+<section class="sec" id="galeria">
+<span class="k">Galeria</span>
+<div class="gg">
+<div><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Corte"></div>
+<div><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80" alt="Tesoura"></div>
+<div><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Barba"></div>
+<div><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=800&q=80" alt="Barbeiro"></div>
 </div>
-</div></section>
+</section>
 
-<section class="hours" id="horarios"><div class="wrap">
-<div>
-<h2>Horários</h2>
-<div class="hrow"><span class="day">Segunda</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Terça</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Quarta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Quinta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Sexta</span><span>09:00 &mdash; 20:00</span></div>
-<div class="hrow"><span class="day">Sábado</span><span>08:00 &mdash; 17:00</span></div>
-<div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
-</div>
-<div class="cbox">
-<h2>Contato</h2>
-<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Endereço</h4><p>R. Bento Gonçalves, 2059 &mdash; Centro<br>Novo Hamburgo / RS</p></div></div>
-<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Telefone</h4><p><a href="https://wa.me/555132799540">(51) 3279-9540</a></p></div></div>
-<div class="li"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><div><h4>Google</h4><p>4.8 &#9733; &middot; 301 avaliações</p></div></div>
-</div>
-</div></section>
+<section class="sec" id="hor&aacute;rios">
+<span class="k">Hor&aacute;rios</span>
+<div class="hr"><span>Segunda</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Ter&ccedil;a</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Quarta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Quinta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>Sexta</span><span>09:00 &mdash; 20:00</span></div>
+<div class="hr"><span>S&aacute;bado</span><span>08:00 &mdash; 17:00</span></div>
+<div class="hr"><span>Domingo</span><span class="cl">Fechado</span></div>
+</section>
 
-<footer><div class="wrap">La Mafia Barbearia &middot; Centro, Novo Hamburgo/RS &middot; &copy; 2026</div></footer>
+<section class="sec" id="contato">
+<span class="k">Contato</span>
+<div class="cl"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Endere&ccedil;o</h4><p>R. Bento Gon&ccedil;alves, 2059 &mdash; Centro<br>Novo Hamburgo / RS</p></div></div>
+<div class="cl"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Telefone</h4><p><a href="https://wa.me/555132799540">(51) 3279-9540</a></p></div></div>
+</section>
+</main>
+</div>
 </body>
 </html>
