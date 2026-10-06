@@ -1,374 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaisQ Barber Club - Barbearia em Novo Hamburgo</title>
-    <meta name="description" content="O MaisQ Barber Club é a barbearia mais bem avaliada de Novo Hamburgo! Com 609 avaliações 5 estrelas, oferecemos cortes modernos, barbas impecáveis e um ambiente premium incomparável.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --preto: #0a0a0a;
-            --cinza-escuro: #1a1a1a;
-            --cinza: #6b7280;
-            --cinza-claro: #f3f4f6;
-            --branco: #ffffff;
-            --dourado: #d4a853;
-            --dourado-escuro: #c8963e;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--preto);
-            color: var(--branco);
-            line-height: 1.6;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        /* Header */
-        .header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            padding: 16px 0;
-        }
-        .header .container { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--branco); text-decoration: none; }
-        .logo span { color: var(--dourado); }
-        .nav { display: flex; gap: 32px; align-items: center; }
-        .nav a { color: var(--cinza); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        .nav a:hover { color: var(--dourado); }
-        .btn-cta {
-            background: var(--dourado); color: var(--preto); border: none;
-            padding: 12px 24px; border-radius: 8px; font-weight: 600;
-            font-size: 0.95rem; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-cta:hover { background: var(--dourado-escuro); transform: translateY(-1px); }
-        
-        /* Hero */
-        .hero {
-            min-height: 100vh; display: flex; align-items: center;
-            background: linear-gradient(135deg, var(--preto) 0%, var(--cinza-escuro) 100%);
-            padding: 120px 0 80px; text-align: center;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700;
-            line-height: 1.1; margin-bottom: 24px;
-        }
-        .hero h1 span { color: var(--dourado); }
-        .hero p { font-size: 1.2rem; color: var(--cinza); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-primary {
-            background: var(--dourado); color: var(--preto); border: none;
-            padding: 16px 32px; border-radius: 8px; font-size: 1rem;
-            font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-primary:hover { background: var(--dourado-escuro); transform: translateY(-2px); }
-        .btn-secondary {
-            background: transparent; color: var(--branco); border: 2px solid var(--branco);
-            padding: 16px 32px; border-radius: 8px; font-size: 1rem;
-            font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-secondary:hover { background: var(--branco); color: var(--preto); }
-        
-        /* Seções */
-        .section { padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 16px;
-        }
-        .section-header p { font-size: 1.1rem; color: var(--cinza); max-width: 600px; margin: 0 auto; }
-        
-        /* Serviços */
-        .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .servico-card {
-            background: var(--cinza-escuro); padding: 32px; border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;
-        }
-        .servico-card:hover { transform: translateY(-4px); border-color: var(--dourado); }
-        .servico-info h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
-        .servico-info .duracao { color: var(--cinza); font-size: 0.9rem; }
-        .servico-preco { font-size: 1.5rem; font-weight: 700; color: var(--dourado); margin-top: 16px; }
-        
-        /* Horários */
-        .horarios-table { width: 100%; border-collapse: collapse; max-width: 600px; margin: 0 auto; }
-        .horarios-table td {
-            padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .horarios-table tr:last-child td { border-bottom: none; }
-        
-        /* Contato */
-        .contato { background: var(--cinza-escuro); }
-        .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .contato-info h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
-        .contato-info p { color: var(--cinza); margin-bottom: 32px; }
-        .contato-item { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-        .contato-item .icon {
-            width: 48px; height: 48px; background: var(--dourado);
-            border-radius: 12px; display: flex; align-items: center; justify-content: center;
-            font-size: 1.25rem;
-        }
-        .contato-item .text h4 { font-size: 0.85rem; color: var(--cinza); margin-bottom: 4px; }
-        .contato-item .text p { font-size: 1rem; color: var(--branco); margin: 0; }
-        
-        /* Footer */
-        .footer {
-            background: var(--preto); color: var(--branco);
-            padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h4 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--branco); }
-        .footer-section p, .footer-section a { color: var(--cinza); font-size: 0.9rem; line-height: 1.8; text-decoration: none; display: block; }
-        .footer-section a:hover { color: var(--dourado); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; text-align: center; }
-        .footer-bottom p { color: var(--cinza); font-size: 0.85rem; }
-        
-
-        /* Formulário */
-        .contato-form h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 8px; }
-        .contato-form > p { color: var(--cinza); margin-bottom: 24px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 8px; color: var(--cinza-claro); }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 14px 16px; background: var(--preto);
-            border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
-            color: var(--branco); font-family: inherit; font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none; border-color: var(--dourado);
-        }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .btn-submit {
-            width: 100%; background: var(--dourado); color: var(--preto);
-            border: none; padding: 16px; border-radius: 8px;
-            font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
-        }
-        .btn-submit:hover { background: var(--dourado-escuro); }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .contato-grid { grid-template-columns: 1fr; }
-            .section { padding: 60px 0; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaisQ Barber Club — O clube de barbearia de Novo Hamburgo</title>
+<meta name="description" content="MaisQ Barber Club: a barbearia mais bem avaliada de Novo Hamburgo com 609 avaliações 5 estrelas. Experiência premium de barbearia.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1117;--panel:#141b24;--panel2:#1a2331;--mint:#3ddc97;--mint-d:#2bb87c;--txt:#e8eef5;--muted:#8291a5;--line:rgba(61,220,151,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:99;background:rgba(13,17,23,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{width:40px;height:40px;background:linear-gradient(135deg,var(--mint),var(--mint-d));border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.5rem;color:#0d1117}
+.brand .nm{font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:1px;color:var(--txt)}
+.brand .nm span{color:var(--mint)}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--mint)}
+.nav-links a.cta{background:var(--mint);color:#0d1117;padding:11px 22px;border-radius:10px;font-weight:700}
+.nav-links a.cta:hover{background:#fff;color:#0d1117}
+/* hero */
+.hero{padding:150px 0 90px;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(61,220,151,.12),transparent 50%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.badge-top{display:inline-flex;align-items:center;gap:9px;background:rgba(61,220,151,.1);border:1px solid var(--line);border-radius:100px;padding:8px 16px;font-size:.78rem;font-weight:600;color:var(--mint);margin-bottom:26px}
+.hero h1{font-family:'Bebas Neue';font-size:clamp(3.2rem,8vw,6rem);line-height:.94;letter-spacing:.5px;margin-bottom:22px}
+.hero h1 span{color:var(--mint)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:480px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.mbtn{background:var(--mint);color:#0d1117;padding:16px 32px;border-radius:11px;text-decoration:none;font-weight:700;font-size:.94rem;transition:.22s}
+.mbtn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(61,220,151,.28)}
+.gbtn2{border:1px solid var(--line);color:var(--txt);padding:16px 32px;border-radius:11px;text-decoration:none;font-weight:600;font-size:.94rem;transition:.22s}
+.gbtn2:hover{border-color:var(--mint);color:var(--mint)}
+.hero-card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;padding:38px;position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;top:-40px;right:-40px;width:130px;height:130px;background:radial-gradient(circle,rgba(61,220,151,.2),transparent 70%)}
+.hero-card .stars{color:var(--mint);font-size:1.5rem;letter-spacing:3px;margin-bottom:10px}
+.hero-card .score{font-family:'Bebas Neue';font-size:4.5rem;line-height:1;color:#fff}
+.hero-card .score span{font-size:1.6rem;color:var(--muted)}
+.hero-card .lbl{color:var(--muted);font-size:.85rem;margin-bottom:24px}
+.hero-card .sep{height:1px;background:var(--line);margin:20px 0}
+.hero-card .mini{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:12px}
+.hero-card .mini .k{color:var(--muted)}
+.hero-card .mini .v{font-weight:700}
+/* club perks */
+.perks{padding:0 0 80px}
+.perks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.perk{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;transition:.25s}
+.perk:hover{transform:translateY(-5px);border-color:var(--mint);background:var(--panel2)}
+.perk .em{font-size:1.7rem;margin-bottom:16px}
+.perk h3{font-size:1.08rem;font-weight:700;margin-bottom:8px}
+.perk p{color:var(--muted);font-size:.88rem}
+/* services */
+.section{padding:90px 0}
+.head{text-align:center;margin-bottom:56px}
+.head .k{color:var(--mint);font-weight:700;font-size:.76rem;letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:12px}
+.head h2{font-family:'Bebas Neue';font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:1px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.svc{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:34px 28px;transition:.25s}
+.svc:hover{transform:translateY(-6px);border-color:var(--mint)}
+.svc .ic{width:52px;height:52px;background:rgba(61,220,151,.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
+.svc h3{font-size:1.22rem;font-weight:700;margin-bottom:6px}
+.svc .d{color:var(--muted);font-size:.88rem;margin-bottom:20px;min-height:40px}
+.svc .p{font-family:'Bebas Neue';font-size:2.4rem;color:var(--mint);letter-spacing:1px}
+.svc .t{color:var(--muted);font-size:.78rem;letter-spacing:1px}
+/* info */
+.info{background:var(--panel);border-top:1px solid var(--line);padding:90px 0}
+.info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.info h3{font-family:'Bebas Neue';font-size:2.2rem;letter-spacing:1px;margin-bottom:26px}
+.hrow{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.hrow .day{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:1px}
+.hrow .cl{color:var(--mint)}
+.cbox .li{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.cbox .li .ic{width:46px;height:46px;background:rgba(61,220,151,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.cbox .li h4{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:4px}
+.cbox .li p{font-size:1rem}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:.84rem}
+@media(max-width:900px){.hero .wrap,.info .wrap{grid-template-columns:1fr;gap:40px}.nav-links a:not(.cta){display:none}}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">MaisQ<span>Barber</span></a>
-            <nav class="nav">
-                <a href="#inicio">Início</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#horarios">Horários</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <a href="#contato" class="btn-cta">Agendar</a>
-        </div>
-    </header>
+<nav><div class="wrap">
+<a href="#" class="brand"><span class="mk">Q</span><span class="nm">MAIS<span>Q</span></span></a>
+<div class="nav-links"><a href="#clube">O Clube</a><a href="#servicos">Serviços</a><a href="#info">Horários</a><a href="https://wa.me/5551983177712" class="cta">Agendar</a></div>
+</div></nav>
 
-    <section class="hero" id="inicio">
-        <div class="container">
-            <h1>MaisQ Barber Club<span> em Novo Hamburgo</span></h1>
-            <p>O MaisQ Barber Club é a barbearia mais bem avaliada de Novo Hamburgo! Com 609 avaliações 5 estrelas, oferecemos cortes modernos, barbas impecáveis e um ambiente premium incomparável.</p>
-            <div class="hero-buttons">
-                <a href="#servicos" class="btn-primary">Ver Serviços</a>
-                <a href="#contato" class="btn-secondary">Agendar Horário</a>
-            </div>
-        </div>
-    </section>
+<section class="hero"><div class="wrap">
+<div>
+<div class="badge-top">🏆 Barbearia mais bem avaliada de NH</div>
+<h1>MAIS QUE<br>UMA <span>BARBEARIA</span></h1>
+<p>Um clube para quem não aceita menos que o melhor. Atendimento exclusivo, ambiente premium e o padrão MaisQ em cada detalhe.</p>
+<div class="hero-cta"><a href="https://wa.me/5551983177712" class="mbtn">Agendar agora</a><a href="#servicos" class="gbtn2">Ver serviços</a></div>
+</div>
+<div class="hero-card">
+<div class="stars">★★★★★</div>
+<div class="score">5.0 <span>/ 5.0</span></div>
+<div class="lbl">Nota máxima no Google</div>
+<div class="sep"></div>
+<div class="mini"><span class="k">Avaliações</span><span class="v">609</span></div>
+<div class="mini"><span class="k">Avaliações 5 estrelas</span><span class="v">604</span></div>
+<div class="mini"><span class="k">Localização</span><span class="v">Centro · NH</span></div>
+</div>
+</div></section>
 
-    <section class="section" id="servicos">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Conheça nossos serviços e preços</p>
-            </div>
-            <div class="servicos-grid">
-                
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Corte</h3>
-                        <p class="duracao">40 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 60</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Barba</h3>
-                        <p class="duracao">35 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 50</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Corte + Barba</h3>
-                        <p class="duracao">70 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 100</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Sobrancelha</h3>
-                        <p class="duracao">15 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 25</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="perks" id="clube"><div class="wrap">
+<div class="head"><span class="k">O Clube</span><h2>POR QUE O MAISQ</h2></div>
+<div class="perks-grid">
+<div class="perk"><div class="em">🏆</div><h3>609 avaliações</h3><p>A barbearia mais bem avaliada de Novo Hamburgo, com nota 5.0.</p></div>
+<div class="perk"><div class="em">✨</div><h3>Experiência premium</h3><p>Ambiente exclusivo, atendimento personalizado e produtos de alto padrão.</p></div>
+<div class="perk"><div class="em">📍</div><h3>No coração da cidade</h3><p>Localização privilegiada no Centro de Novo Hamburgo.</p></div>
+<div class="perk"><div class="em">⏱️</div><h3>Sem espera</h3><p>Agendamento online e atendimento pontual, no seu horário.</p></div>
+</div>
+</div></section>
 
-    <section class="section" id="horarios">
-        <div class="container">
-            <div class="section-header">
-                <h2>Horário de Funcionamento</h2>
-                <p>Confira nossos horários de atendimento</p>
-            </div>
-            <table class="horarios-table">
-                
-                <tr>
-                    <td>Segunda</td>
-                    <td>09:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Terça</td>
-                    <td>09:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Quarta</td>
-                    <td>09:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Quinta</td>
-                    <td>09:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Sexta</td>
-                    <td>09:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>08:00 - 18:00</td>
-                </tr>
-                <tr>
-                    <td>Domingo</td>
-                    <td>Fechado</td>
-                </tr>
-            </table>
-        </div>
-    </section>
+<section class="section" id="servicos"><div class="wrap">
+<div class="head"><span class="k">Serviços</span><h2>O QUE OFERECEMOS</h2></div>
+<div class="svc-grid">
+<div class="svc"><div class="ic">✂️</div><h3>Corte</h3><p class="d">Técnicas modernas e clássicas com acabamento impecável</p><div class="p">R$ 60</div><div class="t">40 MINUTOS</div></div>
+<div class="svc"><div class="ic">🪒</div><h3>Barba</h3><p class="d">Modelagem completa com toalha quente e navalha</p><div class="p">R$ 50</div><div class="t">35 MINUTOS</div></div>
+<div class="svc"><div class="ic">💈</div><h3>Corte + Barba</h3><p class="d">A experiência MaisQ completa, do início ao fim</p><div class="p">R$ 100</div><div class="t">70 MINUTOS</div></div>
+<div class="svc"><div class="ic">👁️</div><h3>Sobrancelha</h3><p class="d">Design masculino que valoriza o rosto</p><div class="p">R$ 25</div><div class="t">15 MINUTOS</div></div>
+</div>
+</div></section>
 
-    <section class="section contato" id="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Agende seu horário ou tire suas dúvidas</p>
-            </div>
-            <div class="contato-grid">
-                <div class="contato-info">
-                    <h3>Informações de Contato</h3>
-                    <p>Estamos prontos para atender você</p>
-                    <div class="contato-item">
-                        <div class="icon">📍</div>
-                        <div class="text">
-                            <h4>Endereço</h4>
-                            <p>R. Cinco de Abril, 608 - Sl 3 - Centro<br>Novo Hamburgo - RS</p>
-                        </div>
-                    </div>
-                    <div class="contato-item">
-                        <div class="icon">📱</div>
-                        <div class="text">
-                            <h4>Telefone</h4>
-                            <p>+55 51 98317-7712</p>
-                        </div>
-                    </div>
-                    <div class="contato-item">
-                        <div class="icon">⭐</div>
-                        <div class="text">
-                            <h4>Avaliação</h4>
-                            <p>5.0 ⭐ (609 reviews)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contato-form">
-                    <h3>Agende seu Horário</h3>
-                    <p>Preencha o formulário e entraremos em contato</p>
-                    <form onsubmit="alert('Mensagem enviada com sucesso! Entraremos em contato em breve.'); return false;">
-                        <div class="form-group">
-                            <label>Nome</label>
-                            <input type="text" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefone</label>
-                            <input type="tel" placeholder="(51) 99999-9999" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Serviço</label>
-                            <select required>
-                                <option value="">Selecione...</option>
-                                <option value="corte">Corte</option>
-                                <option value="barba">Barba</option>
-                                <option value="combo">Corte + Barba</option>
-                                <option value="sobrancelha">Sobrancelha</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Mensagem</label>
-                            <textarea placeholder="Alguma observação?"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="info"><div class="wrap">
+<div>
+<h3>HORÁRIOS</h3>
+<div class="hrow"><span class="day">Segunda</span><span>09:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Terça</span><span>09:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Quarta</span><span>09:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Quinta</span><span>09:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Sexta</span><span>09:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Sábado</span><span>08:00 — 18:00</span></div>
+<div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
+</div>
+<div class="cbox">
+<h3>CONTATO</h3>
+<div class="li"><div class="ic">📍</div><div><h4>Endereço</h4><p>R. Cinco de Abril, 608 — Sala 3<br>Centro · Novo Hamburgo / RS</p></div></div>
+<div class="li"><div class="ic">📱</div><div><h4>WhatsApp</h4><p>(51) 98317-7712</p></div></div>
+<div class="li"><div class="ic">⭐</div><div><h4>Google</h4><p>5.0 · 609 avaliações</p></div></div>
+</div>
+</div></section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>MaisQ Barber Club</h4>
-                    <p>O MaisQ Barber Club é a barbearia mais bem avaliada de Novo Hamburgo! Com 609 avaliações 5 estrelas, oferecemos cortes modernos, barbas impecáveis e um ambiente premium incomparável.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Úteis</h4>
-                    <a href="#inicio">Início</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#horarios">Horários</a>
-                    <a href="#contato">Contato</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>+55 51 98317-7712</p>
-                    <p>R. Cinco de Abril, 608 - Sl 3 - Centro</p>
-                    <p>Novo Hamburgo - RS</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MaisQ Barber Club. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+<footer><div class="wrap">© 2026 MaisQ Barber Club · Centro, Novo Hamburgo/RS</div></footer>
 </body>
 </html>

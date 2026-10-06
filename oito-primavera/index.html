@@ -1,374 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OITO Barbearia - Barbearia em Novo Hamburgo</title>
-    <meta name="description" content="A OITO Barbearia é sinônimo de qualidade e estilo em Novo Hamburgo! Duas unidades (Primavera e Hamburgo Velho) com profissionais especializados e ambiente premium.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --preto: #0a0a0a;
-            --cinza-escuro: #1a1a1a;
-            --cinza: #6b7280;
-            --cinza-claro: #f3f4f6;
-            --branco: #ffffff;
-            --dourado: #d4a853;
-            --dourado-escuro: #c8963e;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--preto);
-            color: var(--branco);
-            line-height: 1.6;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        /* Header */
-        .header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            padding: 16px 0;
-        }
-        .header .container { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--branco); text-decoration: none; }
-        .logo span { color: var(--dourado); }
-        .nav { display: flex; gap: 32px; align-items: center; }
-        .nav a { color: var(--cinza); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        .nav a:hover { color: var(--dourado); }
-        .btn-cta {
-            background: var(--dourado); color: var(--preto); border: none;
-            padding: 12px 24px; border-radius: 8px; font-weight: 600;
-            font-size: 0.95rem; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-cta:hover { background: var(--dourado-escuro); transform: translateY(-1px); }
-        
-        /* Hero */
-        .hero {
-            min-height: 100vh; display: flex; align-items: center;
-            background: linear-gradient(135deg, var(--preto) 0%, var(--cinza-escuro) 100%);
-            padding: 120px 0 80px; text-align: center;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700;
-            line-height: 1.1; margin-bottom: 24px;
-        }
-        .hero h1 span { color: var(--dourado); }
-        .hero p { font-size: 1.2rem; color: var(--cinza); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-primary {
-            background: var(--dourado); color: var(--preto); border: none;
-            padding: 16px 32px; border-radius: 8px; font-size: 1rem;
-            font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-primary:hover { background: var(--dourado-escuro); transform: translateY(-2px); }
-        .btn-secondary {
-            background: transparent; color: var(--branco); border: 2px solid var(--branco);
-            padding: 16px 32px; border-radius: 8px; font-size: 1rem;
-            font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none;
-        }
-        .btn-secondary:hover { background: var(--branco); color: var(--preto); }
-        
-        /* Seções */
-        .section { padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 16px;
-        }
-        .section-header p { font-size: 1.1rem; color: var(--cinza); max-width: 600px; margin: 0 auto; }
-        
-        /* Serviços */
-        .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .servico-card {
-            background: var(--cinza-escuro); padding: 32px; border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;
-        }
-        .servico-card:hover { transform: translateY(-4px); border-color: var(--dourado); }
-        .servico-info h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
-        .servico-info .duracao { color: var(--cinza); font-size: 0.9rem; }
-        .servico-preco { font-size: 1.5rem; font-weight: 700; color: var(--dourado); margin-top: 16px; }
-        
-        /* Horários */
-        .horarios-table { width: 100%; border-collapse: collapse; max-width: 600px; margin: 0 auto; }
-        .horarios-table td {
-            padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .horarios-table tr:last-child td { border-bottom: none; }
-        
-        /* Contato */
-        .contato { background: var(--cinza-escuro); }
-        .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .contato-info h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
-        .contato-info p { color: var(--cinza); margin-bottom: 32px; }
-        .contato-item { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-        .contato-item .icon {
-            width: 48px; height: 48px; background: var(--dourado);
-            border-radius: 12px; display: flex; align-items: center; justify-content: center;
-            font-size: 1.25rem;
-        }
-        .contato-item .text h4 { font-size: 0.85rem; color: var(--cinza); margin-bottom: 4px; }
-        .contato-item .text p { font-size: 1rem; color: var(--branco); margin: 0; }
-        
-        /* Footer */
-        .footer {
-            background: var(--preto); color: var(--branco);
-            padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h4 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--branco); }
-        .footer-section p, .footer-section a { color: var(--cinza); font-size: 0.9rem; line-height: 1.8; text-decoration: none; display: block; }
-        .footer-section a:hover { color: var(--dourado); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; text-align: center; }
-        .footer-bottom p { color: var(--cinza); font-size: 0.85rem; }
-        
-
-        /* Formulário */
-        .contato-form h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 8px; }
-        .contato-form > p { color: var(--cinza); margin-bottom: 24px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 8px; color: var(--cinza-claro); }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 14px 16px; background: var(--preto);
-            border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
-            color: var(--branco); font-family: inherit; font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none; border-color: var(--dourado);
-        }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .btn-submit {
-            width: 100%; background: var(--dourado); color: var(--preto);
-            border: none; padding: 16px; border-radius: 8px;
-            font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
-        }
-        .btn-submit:hover { background: var(--dourado-escuro); }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .contato-grid { grid-template-columns: 1fr; }
-            .section { padding: 60px 0; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OITO Barbearia — Dois endereços, um padrão · Novo Hamburgo</title>
+<meta name="description" content="OITO Barbearia: duas unidades em Novo Hamburgo com o mesmo padrão de excelência. Primavera e Hamburgo Velho.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#111;--gray:#767676;--soft:#f2f2f0;--line:#e2e2df;--accent:#e8482f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+/* masthead */
+.masthead{border-bottom:2px solid var(--ink);padding:22px 0}
+.masthead .wrap{display:flex;justify-content:space-between;align-items:center}
+.mh-brand{font-family:'Anton';font-size:2.1rem;letter-spacing:-1px;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.mh-brand span{color:var(--accent)}
+.mh-meta{text-align:right;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);line-height:1.7}
+.mh-meta b{color:var(--ink)}
+/* ticker */
+.ticker{background:var(--ink);color:#fff;padding:11px 0;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;animation:tk 26s linear infinite}
+.ticker span i{color:var(--accent);font-style:normal;margin:0 20px}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* hero editorial */
+.hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:50px}
+.hero .kicker{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
+.hero h1{font-family:'Anton';font-size:clamp(3rem,9vw,7rem);line-height:.92;letter-spacing:-2px;text-transform:uppercase;margin-bottom:26px}
+.hero h1 em{font-style:normal;-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero .deck{font-size:1.15rem;color:var(--gray);max-width:540px;line-height:1.7}
+.hero-side{border-left:1px solid var(--line);padding-left:34px;display:flex;flex-direction:column;justify-content:space-between}
+.side-stat{margin-bottom:30px}
+.side-stat .n{font-family:'Anton';font-size:3.2rem;line-height:1;color:var(--accent)}
+.side-stat .l{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:6px}
+.side-btn{display:block;background:var(--ink);color:#fff;text-align:center;padding:17px;text-decoration:none;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.82rem;transition:.2s}
+.side-btn:hover{background:var(--accent)}
+/* units */
+.units{padding:80px 0}
+.units-head{margin-bottom:48px}
+.units-head h2{font-family:'Anton';font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;letter-spacing:-1px}
+.units-head .s{color:var(--gray);margin-top:8px}
+.unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.unit{border:1px solid var(--line);padding:38px;transition:.25s;position:relative}
+.unit:hover{border-color:var(--ink);transform:translateY(-4px)}
+.unit .badge{position:absolute;top:-1px;right:26px;background:var(--accent);color:#fff;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;font-weight:600}
+.unit h3{font-family:'Anton';font-size:1.7rem;text-transform:uppercase;margin-bottom:6px}
+.unit .hood{color:var(--accent);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+.unit .addr{color:var(--gray);margin-bottom:6px;font-size:.95rem}
+.unit .tel{font-weight:600;margin-bottom:24px}
+.unit a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;border-bottom:2px solid var(--accent);padding-bottom:3px}
+/* services editorial */
+.services{background:var(--soft);padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:1px solid var(--line)}
+.svc{padding:34px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s;background:var(--soft)}
+.svc:hover{background:#fff}
+.svc .n{font-family:'Anton';font-size:.8rem;color:var(--accent);margin-bottom:16px}
+.svc h3{font-size:1.2rem;font-weight:600;margin-bottom:8px}
+.svc .d{color:var(--gray);font-size:.88rem;margin-bottom:18px}
+.svc .p{font-family:'Anton';font-size:1.9rem;letter-spacing:-.5px}
+.svc .t{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+/* hours */
+.hours{padding:80px 0}
+.hours .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
+.hours h2{font-family:'Anton';font-size:2rem;text-transform:uppercase}
+.hours .lead{color:var(--gray);margin-top:12px;font-size:.95rem}
+.hrow{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hrow .day{text-transform:uppercase;letter-spacing:1px;font-size:.8rem;font-weight:600;color:var(--gray)}
+.hrow .cl{color:var(--accent);font-weight:600}
+footer{border-top:2px solid var(--ink);padding:36px 0;text-align:center;font-size:.78rem;letter-spacing:1px;color:var(--gray);text-transform:uppercase}
+@media(max-width:900px){.hero .wrap,.unit-grid,.hours .wrap{grid-template-columns:1fr}.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:30px}}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">OITO<span>Barbearia</span></a>
-            <nav class="nav">
-                <a href="#inicio">Início</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#horarios">Horários</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <a href="#contato" class="btn-cta">Agendar</a>
-        </div>
-    </header>
+<div class="masthead"><div class="wrap">
+<a href="#" class="mh-brand">OITO<span>.</span></a>
+<div class="mh-meta"><b>Barbearia</b><br>Novo Hamburgo · RS<br>Duas unidades</div>
+</div></div>
 
-    <section class="hero" id="inicio">
-        <div class="container">
-            <h1>OITO Barbearia<span> em Novo Hamburgo</span></h1>
-            <p>A OITO Barbearia é sinônimo de qualidade e estilo em Novo Hamburgo! Duas unidades (Primavera e Hamburgo Velho) com profissionais especializados e ambiente premium.</p>
-            <div class="hero-buttons">
-                <a href="#servicos" class="btn-primary">Ver Serviços</a>
-                <a href="#contato" class="btn-secondary">Agendar Horário</a>
-            </div>
-        </div>
-    </section>
+<div class="ticker"><span>PRIMAVERA <i>◆</i> HAMBURGO VELHO <i>◆</i> DOIS ENDEREÇOS <i>◆</i> UM PADRÃO <i>◆</i> PRIMAVERA <i>◆</i> HAMBURGO VELHO <i>◆</i> DOIS ENDEREÇOS <i>◆</i> UM PADRÃO <i>◆</i></span></div>
 
-    <section class="section" id="servicos">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Conheça nossos serviços e preços</p>
-            </div>
-            <div class="servicos-grid">
-                
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Corte</h3>
-                        <p class="duracao">35 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 55</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Barba</h3>
-                        <p class="duracao">30 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 45</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Corte + Barba</h3>
-                        <p class="duracao">60 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 95</div>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-info">
-                        <h3>Sobrancelha</h3>
-                        <p class="duracao">15 min</p>
-                    </div>
-                    <div class="servico-preco">R$ 25</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero"><div class="wrap">
+<div>
+<div class="kicker">Edição Novo Hamburgo</div>
+<h1>Dois endereços.<br><em>Um padrão.</em></h1>
+<p class="deck">A OITO nasceu para elevar o conceito de barbearia na cidade. Hoje, com duas unidades, mantemos o mesmo rigor em cada corte, cada barba e cada detalhe.</p>
+</div>
+<div class="hero-side">
+<div>
+<div class="side-stat"><div class="n">5.0</div><div class="l">Nota no Google</div></div>
+<div class="side-stat"><div class="n">262</div><div class="l">Avaliações</div></div>
+<div class="side-stat"><div class="n">02</div><div class="l">Unidades</div></div>
+</div>
+<a href="https://wa.me/5551993380247" class="side-btn">Agendar horário</a>
+</div>
+</div></section>
 
-    <section class="section" id="horarios">
-        <div class="container">
-            <div class="section-header">
-                <h2>Horário de Funcionamento</h2>
-                <p>Confira nossos horários de atendimento</p>
-            </div>
-            <table class="horarios-table">
-                
-                <tr>
-                    <td>Segunda</td>
-                    <td>10:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Terça</td>
-                    <td>10:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Quarta</td>
-                    <td>10:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Quinta</td>
-                    <td>10:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Sexta</td>
-                    <td>10:00 - 20:00</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>10:00 - 16:00</td>
-                </tr>
-                <tr>
-                    <td>Domingo</td>
-                    <td>Fechado</td>
-                </tr>
-            </table>
-        </div>
-    </section>
+<section class="units"><div class="wrap">
+<div class="units-head"><h2>Nossas unidades</h2><p class="s">Escolha a mais próxima de você</p></div>
+<div class="unit-grid">
+<div class="unit">
+<span class="badge">Unidade 1</span>
+<h3>Primavera</h3>
+<div class="hood">Bairro Primavera</div>
+<p class="addr">R. Boa Saúde, 1030 — Térreo</p>
+<p class="tel">(51) 99338-0247</p>
+<a href="https://wa.me/5551993380247">Agendar nesta unidade →</a>
+</div>
+<div class="unit">
+<span class="badge">Unidade 2</span>
+<h3>Hamburgo Velho</h3>
+<div class="hood">Bairro Hamburgo Velho</div>
+<p class="addr">R. Santos Pedroso, 231</p>
+<p class="tel">(51) 99014-9080</p>
+<a href="https://wa.me/5551990149080">Agendar nesta unidade →</a>
+</div>
+</div>
+</div></section>
 
-    <section class="section contato" id="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Agende seu horário ou tire suas dúvidas</p>
-            </div>
-            <div class="contato-grid">
-                <div class="contato-info">
-                    <h3>Informações de Contato</h3>
-                    <p>Estamos prontos para atender você</p>
-                    <div class="contato-item">
-                        <div class="icon">📍</div>
-                        <div class="text">
-                            <h4>Endereço</h4>
-                            <p>R. Boa Saúde, 1030 - Térreo - Primavera<br>Novo Hamburgo - RS</p>
-                        </div>
-                    </div>
-                    <div class="contato-item">
-                        <div class="icon">📱</div>
-                        <div class="text">
-                            <h4>Telefone</h4>
-                            <p>+55 51 99338-0247</p>
-                        </div>
-                    </div>
-                    <div class="contato-item">
-                        <div class="icon">⭐</div>
-                        <div class="text">
-                            <h4>Avaliação</h4>
-                            <p>5.0 ⭐ (262 reviews)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contato-form">
-                    <h3>Agende seu Horário</h3>
-                    <p>Preencha o formulário e entraremos em contato</p>
-                    <form onsubmit="alert('Mensagem enviada com sucesso! Entraremos em contato em breve.'); return false;">
-                        <div class="form-group">
-                            <label>Nome</label>
-                            <input type="text" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefone</label>
-                            <input type="tel" placeholder="(51) 99999-9999" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Serviço</label>
-                            <select required>
-                                <option value="">Selecione...</option>
-                                <option value="corte">Corte</option>
-                                <option value="barba">Barba</option>
-                                <option value="combo">Corte + Barba</option>
-                                <option value="sobrancelha">Sobrancelha</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Mensagem</label>
-                            <textarea placeholder="Alguma observação?"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="services"><div class="wrap">
+<div class="units-head"><h2>Serviços</h2></div>
+<div class="svc-grid">
+<div class="svc"><div class="n">01</div><h3>Corte</h3><p class="d">Precisão em cada detalhe</p><div class="p">R$ 55</div><div class="t">35 minutos</div></div>
+<div class="svc"><div class="n">02</div><h3>Barba</h3><p class="d">Modelagem e finalização</p><div class="p">R$ 45</div><div class="t">30 minutos</div></div>
+<div class="svc"><div class="n">03</div><h3>Corte + Barba</h3><p class="d">A experiência OITO completa</p><div class="p">R$ 95</div><div class="t">60 minutos</div></div>
+<div class="svc"><div class="n">04</div><h3>Sobrancelha</h3><p class="d">Design masculino</p><div class="p">R$ 25</div><div class="t">15 minutos</div></div>
+</div>
+</div></section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>OITO Barbearia</h4>
-                    <p>A OITO Barbearia é sinônimo de qualidade e estilo em Novo Hamburgo! Duas unidades (Primavera e Hamburgo Velho) com profissionais especializados e ambiente premium.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Úteis</h4>
-                    <a href="#inicio">Início</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#horarios">Horários</a>
-                    <a href="#contato">Contato</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>+55 51 99338-0247</p>
-                    <p>R. Boa Saúde, 1030 - Térreo - Primavera</p>
-                    <p>Novo Hamburgo - RS</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 OITO Barbearia. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+<section class="hours"><div class="wrap">
+<div><h2>Horários</h2><p class="lead">Segunda a sábado, nas duas unidades.</p></div>
+<div>
+<div class="hrow"><span class="day">Segunda</span><span>10:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Terça</span><span>10:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Quarta</span><span>10:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Quinta</span><span>10:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Sexta</span><span>10:00 — 20:00</span></div>
+<div class="hrow"><span class="day">Sábado</span><span>10:00 — 16:00</span></div>
+<div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
+</div>
+</div></section>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+<footer><div class="wrap">© 2026 OITO Barbearia · Primavera &amp; Hamburgo Velho · Novo Hamburgo/RS</div></footer>
 </body>
 </html>
