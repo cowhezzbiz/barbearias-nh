@@ -3,98 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kucão Barber — Barbearia em Canudos, Novo Hamburgo</title>
-<meta name="description" content="Kucão Barber: a barbearia mais bem avaliada de Canudos. Cortes precisos, ambiente leve e agendamento fácil.">
+<title>Kucão Barber | Barbearia em Canudos, Novo Hamburgo</title>
+<meta name="description" content="Kucão Barber em Canudos, Novo Hamburgo. Cortes precisos, atendimento pontual e agendamento pelo WhatsApp. Nota 4.9 no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{--white:#fff;--bg:#f7f8fa;--ink:#0f1115;--gray:#6a7180;--line:#e6e8ec;--accent:#2f6bff;--accent-soft:#eef3ff}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-weight:800;font-size:1.2rem;letter-spacing:-.4px;text-decoration:none;color:var(--ink)}
-.logo .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:middle}
-.hnav{display:flex;gap:6px;align-items:center}
-.hnav a{color:var(--gray);text-decoration:none;font-size:.9rem;font-weight:600;padding:9px 15px;border-radius:9px;transition:.18s}
+svg{display:block}
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-weight:800;font-size:1.2rem;letter-spacing:-.4px;text-decoration:none;color:var(--ink);display:flex;align-items:center}
+.logo .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:10px}
+.hnav{display:flex;gap:4px;align-items:center}
+.hnav a{color:var(--gray);text-decoration:none;font-size:.9rem;font-weight:600;padding:10px 16px;border-radius:10px;transition:.18s}
 .hnav a:hover{background:var(--accent-soft);color:var(--accent)}
-.hnav a.cta{background:var(--ink);color:#fff}
+.hnav a.cta{background:var(--ink);color:#fff;margin-left:8px}
 .hnav a.cta:hover{background:var(--accent);color:#fff}
-/* hero */
-.hero{padding:88px 0 72px}
+/* HERO */
+.hero{padding:80px 0 72px}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 16px;font-size:.8rem;font-weight:600;color:var(--gray);margin-bottom:26px;box-shadow:0 1px 2px rgba(15,17,21,.04)}
+.pill{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:9px 17px;font-size:.8rem;font-weight:600;color:var(--gray);margin-bottom:26px;box-shadow:0 1px 3px rgba(15,17,21,.05)}
 .pill .star{color:#f5a623}
-.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:800;letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px}
+.hero h1{font-size:clamp(2.3rem,5vw,3.6rem);font-weight:800;letter-spacing:-1.6px;line-height:1.1;margin-bottom:22px}
 .hero h1 span{color:var(--accent)}
-.hero .sub{font-size:1.12rem;color:var(--gray);max-width:460px;margin-bottom:32px}
+.hero .sub{font-size:1.1rem;color:var(--gray);max-width:470px;margin-bottom:34px}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-.b1{background:var(--accent);color:#fff;padding:15px 30px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.2s;box-shadow:0 6px 18px rgba(47,107,255,.25)}
-.b1:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(47,107,255,.32)}
-.b2{background:#fff;border:1px solid var(--line);color:var(--ink);padding:15px 30px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.2s}
+.b1{background:var(--accent);color:#fff;padding:16px 30px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.94rem;transition:.2s;box-shadow:0 6px 20px rgba(47,107,255,.26);display:inline-flex;align-items:center;gap:9px}
+.b1:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(47,107,255,.34)}
+.b2{background:#fff;border:1px solid var(--line);color:var(--ink);padding:16px 30px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.94rem;transition:.2s}
 .b2:hover{border-color:var(--ink)}
-.hero-visual{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:0 20px 50px rgba(15,17,21,.07)}
-.stat-row{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
-.stat-row:last-child{border-bottom:none}
-.stat-row .em{font-size:1.5rem;width:46px;height:46px;background:var(--accent-soft);border-radius:12px;display:flex;align-items:center;justify-content:center}
-.stat-row h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;color:var(--gray);font-weight:700}
-.stat-row p{font-weight:800;font-size:1.05rem}
-/* services */
-.section{padding:76px 0}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px}
+.hero-visual .float{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(15,17,21,.14)}
+.hero-visual .float .em{width:44px;height:44px;background:var(--accent-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-visual .float h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.8px;color:var(--gray);font-weight:700}
+.hero-visual .float p{font-weight:800;font-size:1rem}
+/* SERVICES */
+.section{padding:78px 0}
 .sec-title{margin-bottom:44px}
-.sec-title .k{color:var(--accent);font-weight:800;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:10px}
-.sec-title h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px}
+.sec-title .k{color:var(--accent);font-weight:800;font-size:.76rem;letter-spacing:1.6px;text-transform:uppercase;display:block;margin-bottom:10px}
+.sec-title h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-1px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;transition:.22s}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,17,21,.08);border-color:#d7dbe3}
-.card .ic{width:48px;height:48px;background:var(--accent-soft);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
-.card h3{font-size:1.15rem;font-weight:800;margin-bottom:6px}
-.card .dur{color:var(--gray);font-size:.85rem;margin-bottom:16px}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(15,17,21,.09);border-color:#d7dbe3}
+.card .ic{width:48px;height:48px;background:var(--accent-soft);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--accent)}
+.card h3{font-size:1.14rem;font-weight:800;margin-bottom:6px}
+.card .dur{color:var(--gray);font-size:.85rem;margin-bottom:18px}
 .card .p{font-size:1.4rem;font-weight:800;color:var(--accent)}
-/* hours */
-.hours{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.hours .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:76px 24px}
+/* ABOUT */
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:78px 24px}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:20px}
+.about h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800;letter-spacing:-1px;margin-bottom:20px}
+.about p{color:var(--gray);margin-bottom:16px;font-size:1.02rem}
+.about .mini{display:flex;gap:36px;margin-top:30px;flex-wrap:wrap}
+.about .mini .n{font-size:1.9rem;font-weight:800;color:var(--accent);line-height:1}
+.about .mini .l{font-size:.76rem;text-transform:uppercase;letter-spacing:.9px;color:var(--gray);font-weight:700;margin-top:5px}
+/* GALLERY */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal{aspect-ratio:1;overflow:hidden;border-radius:14px;background:var(--line)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gal:hover img{transform:scale(1.06)}
+/* REVIEWS */
+.reviews{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rev{border:1px solid var(--line);border-radius:16px;padding:26px;background:var(--bg)}
+.rev .stars{color:#f5a623;letter-spacing:2px;margin-bottom:14px;font-size:.92rem}
+.rev p{font-size:.96rem;color:#3a4150;margin-bottom:18px}
+.rev .who{font-weight:800;font-size:.85rem}
+/* HOURS */
+.hours{background:#fff;border-top:1px solid var(--line)}
+.hours .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:78px 24px}
 .hlist{background:var(--bg);border-radius:16px;padding:10px 24px}
-.hlist .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.hlist .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.93rem}
 .hlist .row:last-child{border-bottom:none}
 .hlist .row span:first-child{color:var(--gray);font-weight:600}
 .hlist .closed{color:#d64545;font-weight:700}
-.cbox p{color:var(--gray);margin-bottom:12px}
-.cbox strong{color:var(--ink);font-weight:700}
-.cbox a.map{display:inline-flex;gap:8px;align-items:center;margin-top:8px;color:var(--accent);text-decoration:none;font-weight:700;font-size:.92rem}
-footer{padding:40px 0;text-align:center;color:var(--gray);font-size:.85rem}
-@media(max-width:860px){.hero .wrap,.hours .wrap{grid-template-columns:1fr;gap:36px}.hnav a:not(.cta){display:none}}
+.cbox p{color:var(--gray);margin-bottom:16px}
+.cbox strong{color:var(--ink);font-weight:800;display:block;font-size:.72rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px}
+.cbox a{color:var(--accent);text-decoration:none;font-weight:700}
+.cbox a:hover{text-decoration:underline}
+footer{padding:42px 0;text-align:center;color:var(--gray);font-size:.85rem;background:#fff;border-top:1px solid var(--line)}
+@media(max-width:880px){
+.hero .wrap,.about .wrap,.hours .wrap{grid-template-columns:1fr;gap:38px}
+.hnav a:not(.cta){display:none}
+.gal-grid{grid-template-columns:repeat(2,1fr)}
+.section,.about .wrap,.hours .wrap{padding:56px 24px}
+}
 </style>
 </head>
 <body>
 <header><div class="wrap">
 <a href="#" class="logo"><span class="dot"></span>Kucão Barber</a>
-<div class="hnav"><a href="#servicos">Serviços</a><a href="#horarios">Horários</a><a href="#contato">Contato</a><a href="https://wa.me/5551998789814" class="cta">Agendar</a></div>
+<div class="hnav"><a href="#servicos">Serviços</a><a href="#sobre">A casa</a><a href="#galeria">Galeria</a><a href="#horarios">Horários</a><a href="https://wa.me/5551998789814" class="cta">Agendar</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
 <div>
-<div class="pill"><span class="star">★</span> 4.9 · 308 avaliações no Google</div>
+<div class="pill"><span class="star">&#9733;</span> 4.9 &middot; 308 avaliações no Google</div>
 <h1>Corte bem feito, <span>sem enrolação</span>.</h1>
 <p class="sub">A barbearia mais bem avaliada de Canudos. Agendamento rápido, atendimento pontual e um resultado que fala por si.</p>
-<div class="cta-row"><a href="https://wa.me/5551998789814" class="b1">Agendar no WhatsApp</a><a href="#servicos" class="b2">Ver serviços</a></div>
+<div class="cta-row">
+<a href="https://wa.me/5551998789814" class="b1"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar no WhatsApp</a>
+<a href="#servicos" class="b2">Ver serviços</a>
+</div>
 </div>
 <div class="hero-visual">
-<div class="stat-row"><div class="em">⭐</div><div><h4>Avaliação Google</h4><p>4.9 de 5.0</p></div></div>
-<div class="stat-row"><div class="em">💬</div><div><h4>Clientes satisfeitos</h4><p>308 avaliações</p></div></div>
-<div class="stat-row"><div class="em">📍</div><div><h4>Localização</h4><p>Canudos · Novo Hamburgo</p></div></div>
-<div class="stat-row"><div class="em">⏱️</div><div><h4>Atendimento</h4><p>Seg a Sáb</p></div></div>
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80" alt="Barbeiro fazendo degradê">
+<div class="float">
+<div class="em"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent)"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<div><h4>Atendimento pontual</h4><p>Você chega e é atendido</p></div>
+</div>
 </div>
 </div></section>
 
 <section class="section" id="servicos"><div class="wrap">
 <div class="sec-title"><span class="k">Serviços</span><h2>O que fazemos</h2></div>
 <div class="cards">
-<div class="card"><div class="ic">✂️</div><h3>Corte</h3><p class="dur">35 minutos</p><p class="p">R$ 45</p></div>
-<div class="card"><div class="ic">🪒</div><h3>Barba</h3><p class="dur">30 minutos</p><p class="p">R$ 35</p></div>
-<div class="card"><div class="ic">💈</div><h3>Corte + Barba</h3><p class="dur">60 minutos</p><p class="p">R$ 75</p></div>
-<div class="card"><div class="ic">👁️</div><h3>Sobrancelha</h3><p class="dur">15 minutos</p><p class="p">R$ 20</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg></div><h3>Corte</h3><p class="dur">35 minutos</p><p class="p">R$ 45</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M6.5 6.5l11 11M4 20l4-4"/></svg></div><h3>Barba</h3><p class="dur">30 minutos</p><p class="p">R$ 35</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6-6.3 4.6L8 13.9 2 9.4h7.6z"/></svg></div><h3>Corte + Barba</h3><p class="dur">60 minutos</p><p class="p">R$ 75</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Sobrancelha</h3><p class="dur">15 minutos</p><p class="p">R$ 20</p></div>
+</div>
+</div></section>
+
+<section class="about" id="sobre"><div class="wrap">
+<img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80" alt="Interior da Kucão Barber">
+<div>
+<h2>Uma barbearia feita<br>pra respeitar teu tempo</h2>
+<p>A Kucão abriu em Canudos com uma ideia simples: o cliente marca um horário e é atendido naquele horário. Sem fila, sem "espera um pouquinho".</p>
+<p>Deu certo. Hoje são 308 avaliações no Google e uma nota 4.9 que a gente mantém do mesmo jeito que começou, atendendo bem cada pessoa que senta na cadeira.</p>
+<div class="mini">
+<div><div class="n">4.9</div><div class="l">Nota Google</div></div>
+<div><div class="n">308</div><div class="l">Avaliações</div></div>
+<div><div class="n">6</div><div class="l">Dias por semana</div></div>
+</div>
+</div>
+</div></section>
+
+<section class="section" id="galeria"><div class="wrap">
+<div class="sec-title"><span class="k">Galeria</span><h2>O trabalho</h2></div>
+<div class="gal-grid">
+<div class="gal"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80" alt="Degradê"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Barba"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=700&q=80" alt="Barbeiro"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80" alt="Detalhe"></div>
+</div>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+<div class="sec-title"><span class="k">Avaliações</span><h2>Quem senta, volta</h2></div>
+<div class="rev-grid">
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Marquei pelo WhatsApp e cheguei, fui atendido na hora. O corte ficou exatamente como pedi. Isso pra mim já vale tudo."</p><div class="who">Marcelo T.</div></div>
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Ambiente limpo, preço justo e o barbeiro entende o que tu quer. Virei cliente fixo depois da primeira vez."</p><div class="who">Diego R.</div></div>
+<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"O melhor de Canudos sem dúvida. Trabalho caprichado e atendimento educado. Recomendo pra qualquer um."</p><div class="who">Paulo H.</div></div>
 </div>
 </div></section>
 
@@ -102,24 +169,24 @@ footer{padding:40px 0;text-align:center;color:var(--gray);font-size:.85rem}
 <div>
 <div class="sec-title"><span class="k">Funcionamento</span><h2>Horários</h2></div>
 <div class="hlist">
-<div class="row"><span>Segunda</span><span>08:30 — 11:30 · 13:00 — 19:00</span></div>
-<div class="row"><span>Terça</span><span>08:30 — 11:30 · 13:00 — 19:30</span></div>
-<div class="row"><span>Quarta</span><span>08:30 — 11:30 · 13:00 — 19:30</span></div>
-<div class="row"><span>Quinta</span><span>08:30 — 11:30 · 13:00 — 19:30</span></div>
-<div class="row"><span>Sexta</span><span>08:30 — 11:30 · 13:00 — 19:30</span></div>
-<div class="row"><span>Sábado</span><span>08:30 — 18:00</span></div>
+<div class="row"><span>Segunda</span><span>08:30 &mdash; 11:30 &middot; 13:00 &mdash; 19:00</span></div>
+<div class="row"><span>Terça</span><span>08:30 &mdash; 11:30 &middot; 13:00 &mdash; 19:30</span></div>
+<div class="row"><span>Quarta</span><span>08:30 &mdash; 11:30 &middot; 13:00 &mdash; 19:30</span></div>
+<div class="row"><span>Quinta</span><span>08:30 &mdash; 11:30 &middot; 13:00 &mdash; 19:30</span></div>
+<div class="row"><span>Sexta</span><span>08:30 &mdash; 11:30 &middot; 13:00 &mdash; 19:30</span></div>
+<div class="row"><span>Sábado</span><span>08:30 &mdash; 18:00</span></div>
 <div class="row"><span>Domingo</span><span class="closed">Fechado</span></div>
 </div>
 </div>
-<div class="cbox" id="contato">
+<div class="cbox">
 <div class="sec-title"><span class="k">Onde estamos</span><h2>Contato</h2></div>
-<p><strong>Endereço</strong><br>R. Beno Hugo Hack, 226 — Canudos<br>Novo Hamburgo / RS</p>
-<p><strong>WhatsApp</strong><br>(51) 99878-9814</p>
-<p><strong>Google</strong><br>4.9 ⭐ · 308 avaliações</p>
-<a href="https://wa.me/5551998789814" class="map">Agendar pelo WhatsApp →</a>
+<p><strong>Endereço</strong>R. Beno Hugo Hack, 226 &mdash; Canudos<br>Novo Hamburgo / RS</p>
+<p><strong>WhatsApp</strong><a href="https://wa.me/5551998789814">(51) 99878-9814</a></p>
+<p><strong>Google</strong>4.9 &#9733; &middot; 308 avaliações</p>
+<a href="https://wa.me/5551998789814" class="b1" style="margin-top:12px"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar</a>
 </div>
 </div></section>
 
-<footer><div class="wrap">© 2026 Kucão Barber · Canudos, Novo Hamburgo/RS</div></footer>
+<footer><div class="wrap">Kucão Barber &middot; Canudos, Novo Hamburgo/RS &middot; &copy; 2026</div></footer>
 </body>
 </html>

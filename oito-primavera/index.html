@@ -3,84 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OITO Barbearia — Dois endereços, um padrão · Novo Hamburgo</title>
-<meta name="description" content="OITO Barbearia: duas unidades em Novo Hamburgo com o mesmo padrão de excelência. Primavera e Hamburgo Velho.">
+<title>OITO Barbearia | Duas unidades em Novo Hamburgo</title>
+<meta name="description" content="OITO Barbearia, unidades Primavera e Hamburgo Velho em Novo Hamburgo. Mesmo padrão de excelência em cada corte. Agende seu horário.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff;--ink:#111;--gray:#767676;--soft:#f2f2f0;--line:#e2e2df;--accent:#e8482f}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.64;overflow-x:hidden}
 .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
-/* masthead */
-.masthead{border-bottom:2px solid var(--ink);padding:22px 0}
+svg{display:block}
+/* MASTHEAD */
+.masthead{border-bottom:2px solid var(--ink);padding:24px 0;position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);z-index:60}
 .masthead .wrap{display:flex;justify-content:space-between;align-items:center}
-.mh-brand{font-family:'Anton';font-size:2.1rem;letter-spacing:-1px;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.mh-brand{font-family:'Anton';font-size:2rem;letter-spacing:-1px;text-transform:uppercase;text-decoration:none;color:var(--ink)}
 .mh-brand span{color:var(--accent)}
-.mh-meta{text-align:right;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);line-height:1.7}
-.mh-meta b{color:var(--ink)}
-/* ticker */
-.ticker{background:var(--ink);color:#fff;padding:11px 0;overflow:hidden;white-space:nowrap}
-.ticker span{display:inline-block;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;animation:tk 26s linear infinite}
-.ticker span i{color:var(--accent);font-style:normal;margin:0 20px}
+.mh-nav{display:flex;gap:28px;align-items:center}
+.mh-nav a{color:var(--gray);text-decoration:none;font-size:.88rem;font-weight:500;transition:.2s}
+.mh-nav a:hover{color:var(--ink)}
+.mh-nav a.book{background:var(--ink);color:#fff;padding:11px 22px;text-transform:uppercase;letter-spacing:1.5px;font-size:.7rem;font-weight:600}
+.mh-nav a.book:hover{background:var(--accent)}
+/* TICKER */
+.ticker{background:var(--ink);color:#fff;padding:12px 0;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;font-size:.75rem;letter-spacing:3px;text-transform:uppercase;animation:tk 28s linear infinite}
+.ticker i{color:var(--accent);font-style:normal;margin:0 22px}
 @keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* hero editorial */
-.hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:50px}
-.hero .kicker{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
-.hero h1{font-family:'Anton';font-size:clamp(3rem,9vw,7rem);line-height:.92;letter-spacing:-2px;text-transform:uppercase;margin-bottom:26px}
+/* HERO */
+.hero{padding:0;border-bottom:1px solid var(--line)}
+.hero-img{height:min(58vh,500px);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-body{padding:64px 0 68px}
+.hero-body .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:56px}
+.kicker{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+.hero h1{font-family:'Anton';font-size:clamp(2.8rem,8vw,6.4rem);line-height:.92;letter-spacing:-2px;text-transform:uppercase;margin-bottom:28px}
 .hero h1 em{font-style:normal;-webkit-text-stroke:2px var(--ink);color:transparent}
-.hero .deck{font-size:1.15rem;color:var(--gray);max-width:540px;line-height:1.7}
-.hero-side{border-left:1px solid var(--line);padding-left:34px;display:flex;flex-direction:column;justify-content:space-between}
-.side-stat{margin-bottom:30px}
-.side-stat .n{font-family:'Anton';font-size:3.2rem;line-height:1;color:var(--accent)}
-.side-stat .l{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:6px}
-.side-btn{display:block;background:var(--ink);color:#fff;text-align:center;padding:17px;text-decoration:none;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.82rem;transition:.2s}
+.deck{font-size:1.12rem;color:var(--gray);max-width:540px;line-height:1.72}
+.hero-side{border-left:1px solid var(--line);padding-left:36px;display:flex;flex-direction:column;justify-content:space-between}
+.side-stat{margin-bottom:32px}
+.side-stat .n{font-family:'Anton';font-size:3rem;line-height:1;color:var(--accent)}
+.side-stat .l{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:8px}
+.side-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;text-align:center;padding:18px;text-decoration:none;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.78rem;transition:.2s}
 .side-btn:hover{background:var(--accent)}
-/* units */
-.units{padding:80px 0}
-.units-head{margin-bottom:48px}
-.units-head h2{font-family:'Anton';font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;letter-spacing:-1px}
-.units-head .s{color:var(--gray);margin-top:8px}
+/* UNITS */
+.units{padding:88px 0}
+.units-head{margin-bottom:52px}
+.units-head h2{font-family:'Anton';font-size:clamp(2rem,5vw,3.3rem);text-transform:uppercase;letter-spacing:-1px}
+.units-head .s{color:var(--gray);margin-top:10px}
 .unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.unit{border:1px solid var(--line);padding:38px;transition:.25s;position:relative}
+.unit{border:1px solid var(--line);transition:.25s;position:relative;overflow:hidden}
 .unit:hover{border-color:var(--ink);transform:translateY(-4px)}
-.unit .badge{position:absolute;top:-1px;right:26px;background:var(--accent);color:#fff;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;font-weight:600}
-.unit h3{font-family:'Anton';font-size:1.7rem;text-transform:uppercase;margin-bottom:6px}
-.unit .hood{color:var(--accent);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:22px}
-.unit .addr{color:var(--gray);margin-bottom:6px;font-size:.95rem}
-.unit .tel{font-weight:600;margin-bottom:24px}
-.unit a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;border-bottom:2px solid var(--accent);padding-bottom:3px}
-/* services editorial */
-.services{background:var(--soft);padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:1px solid var(--line)}
-.svc{padding:34px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s;background:var(--soft)}
+.unit img{width:100%;height:230px;object-fit:cover}
+.unit-body{padding:36px}
+.unit .badge{position:absolute;top:0;right:28px;background:var(--accent);color:#fff;font-size:.64rem;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;font-weight:600}
+.unit h3{font-family:'Anton';font-size:1.65rem;text-transform:uppercase;margin-bottom:6px}
+.unit .hood{color:var(--accent);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:24px}
+.unit .addr{color:var(--gray);margin-bottom:8px;font-size:.94rem}
+.unit .tel{font-weight:600;margin-bottom:26px;display:flex;align-items:center;gap:9px}
+.unit a.go{color:var(--ink);text-decoration:none;font-weight:600;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;border-bottom:2px solid var(--accent);padding-bottom:4px}
+/* SERVICES */
+.services{background:var(--soft);padding:88px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc{padding:36px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s;background:var(--soft)}
 .svc:hover{background:#fff}
-.svc .n{font-family:'Anton';font-size:.8rem;color:var(--accent);margin-bottom:16px}
-.svc h3{font-size:1.2rem;font-weight:600;margin-bottom:8px}
-.svc .d{color:var(--gray);font-size:.88rem;margin-bottom:18px}
-.svc .p{font-family:'Anton';font-size:1.9rem;letter-spacing:-.5px}
-.svc .t{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
-/* hours */
-.hours{padding:80px 0}
+.svc .n{font-family:'Anton';font-size:.78rem;color:var(--accent);margin-bottom:18px}
+.svc h3{font-size:1.18rem;font-weight:600;margin-bottom:8px}
+.svc .d{color:var(--gray);font-size:.87rem;margin-bottom:20px;min-height:40px}
+.svc .p{font-family:'Anton';font-size:1.85rem;letter-spacing:-.5px}
+.svc .t{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+/* GALLERY */
+.gal-sec{padding:88px 0}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal{aspect-ratio:1;overflow:hidden;background:var(--soft)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.45s;filter:grayscale(.15)}
+.gal:hover img{transform:scale(1.05);filter:grayscale(0)}
+/* HOURS */
+.hours{padding:88px 0;background:var(--soft);border-top:1px solid var(--line)}
 .hours .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
 .hours h2{font-family:'Anton';font-size:2rem;text-transform:uppercase}
-.hours .lead{color:var(--gray);margin-top:12px;font-size:.95rem}
-.hrow{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:.98rem}
-.hrow .day{text-transform:uppercase;letter-spacing:1px;font-size:.8rem;font-weight:600;color:var(--gray)}
+.hours .lead{color:var(--gray);margin-top:14px;font-size:.94rem}
+.hrow{display:flex;justify-content:space-between;padding:17px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.hrow .day{text-transform:uppercase;letter-spacing:1px;font-size:.78rem;font-weight:600;color:var(--gray)}
 .hrow .cl{color:var(--accent);font-weight:600}
-footer{border-top:2px solid var(--ink);padding:36px 0;text-align:center;font-size:.78rem;letter-spacing:1px;color:var(--gray);text-transform:uppercase}
-@media(max-width:900px){.hero .wrap,.unit-grid,.hours .wrap{grid-template-columns:1fr}.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:30px}}
+footer{border-top:2px solid var(--ink);padding:38px 0;text-align:center;font-size:.76rem;letter-spacing:1px;color:var(--gray);text-transform:uppercase}
+@media(max-width:900px){
+.hero-body .wrap,.unit-grid,.hours .wrap{grid-template-columns:1fr}
+.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:34px}
+.gal-grid{grid-template-columns:repeat(2,1fr)}
+.mh-nav a:not(.book){display:none}
+.units,.services,.gal-sec,.hours{padding:60px 0}
+}
 </style>
 </head>
 <body>
 <div class="masthead"><div class="wrap">
 <a href="#" class="mh-brand">OITO<span>.</span></a>
-<div class="mh-meta"><b>Barbearia</b><br>Novo Hamburgo · RS<br>Duas unidades</div>
+<div class="mh-nav"><a href="#unidades">Unidades</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#horarios">Horários</a><a href="https://wa.me/5551993380247" class="book">Agendar</a></div>
 </div></div>
 
-<div class="ticker"><span>PRIMAVERA <i>◆</i> HAMBURGO VELHO <i>◆</i> DOIS ENDEREÇOS <i>◆</i> UM PADRÃO <i>◆</i> PRIMAVERA <i>◆</i> HAMBURGO VELHO <i>◆</i> DOIS ENDEREÇOS <i>◆</i> UM PADRÃO <i>◆</i></span></div>
+<div class="ticker"><span>PRIMAVERA <i>&#9670;</i> HAMBURGO VELHO <i>&#9670;</i> DOIS ENDEREÇOS <i>&#9670;</i> UM PADRÃO <i>&#9670;</i> PRIMAVERA <i>&#9670;</i> HAMBURGO VELHO <i>&#9670;</i> DOIS ENDEREÇOS <i>&#9670;</i> UM PADRÃO <i>&#9670;</i></span></div>
 
-<section class="hero"><div class="wrap">
+<section class="hero">
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&q=80" alt="Interior da OITO Barbearia"></div>
+<div class="hero-body"><div class="wrap">
 <div>
 <div class="kicker">Edição Novo Hamburgo</div>
 <h1>Dois endereços.<br><em>Um padrão.</em></h1>
@@ -92,33 +117,40 @@ footer{border-top:2px solid var(--ink);padding:36px 0;text-align:center;font-siz
 <div class="side-stat"><div class="n">262</div><div class="l">Avaliações</div></div>
 <div class="side-stat"><div class="n">02</div><div class="l">Unidades</div></div>
 </div>
-<a href="https://wa.me/5551993380247" class="side-btn">Agendar horário</a>
+<a href="https://wa.me/5551993380247" class="side-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar horário</a>
 </div>
-</div></section>
+</div></div>
+</section>
 
-<section class="units"><div class="wrap">
+<section class="units" id="unidades"><div class="wrap">
 <div class="units-head"><h2>Nossas unidades</h2><p class="s">Escolha a mais próxima de você</p></div>
 <div class="unit-grid">
 <div class="unit">
 <span class="badge">Unidade 1</span>
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80" alt="Unidade Primavera">
+<div class="unit-body">
 <h3>Primavera</h3>
 <div class="hood">Bairro Primavera</div>
-<p class="addr">R. Boa Saúde, 1030 — Térreo</p>
-<p class="tel">(51) 99338-0247</p>
-<a href="https://wa.me/5551993380247">Agendar nesta unidade →</a>
+<p class="addr">R. Boa Saúde, 1030 &mdash; Térreo</p>
+<p class="tel"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> (51) 99338-0247</p>
+<a href="https://wa.me/5551993380247" class="go">Agendar nesta unidade &rarr;</a>
+</div>
 </div>
 <div class="unit">
 <span class="badge">Unidade 2</span>
+<img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=900&q=80" alt="Unidade Hamburgo Velho">
+<div class="unit-body">
 <h3>Hamburgo Velho</h3>
 <div class="hood">Bairro Hamburgo Velho</div>
 <p class="addr">R. Santos Pedroso, 231</p>
-<p class="tel">(51) 99014-9080</p>
-<a href="https://wa.me/5551990149080">Agendar nesta unidade →</a>
+<p class="tel"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> (51) 99014-9080</p>
+<a href="https://wa.me/5551990149080" class="go">Agendar nesta unidade &rarr;</a>
+</div>
 </div>
 </div>
 </div></section>
 
-<section class="services"><div class="wrap">
+<section class="services" id="servicos"><div class="wrap">
 <div class="units-head"><h2>Serviços</h2></div>
 <div class="svc-grid">
 <div class="svc"><div class="n">01</div><h3>Corte</h3><p class="d">Precisão em cada detalhe</p><div class="p">R$ 55</div><div class="t">35 minutos</div></div>
@@ -128,19 +160,29 @@ footer{border-top:2px solid var(--ink);padding:36px 0;text-align:center;font-siz
 </div>
 </div></section>
 
-<section class="hours"><div class="wrap">
+<section class="gal-sec" id="galeria"><div class="wrap">
+<div class="units-head"><h2>Galeria</h2></div>
+<div class="gal-grid">
+<div class="gal"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80" alt="Corte"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=700&q=80" alt="Tesoura"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80" alt="Barba"></div>
+<div class="gal"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=700&q=80" alt="Barbeiro"></div>
+</div>
+</div></section>
+
+<section class="hours" id="horarios"><div class="wrap">
 <div><h2>Horários</h2><p class="lead">Segunda a sábado, nas duas unidades.</p></div>
 <div>
-<div class="hrow"><span class="day">Segunda</span><span>10:00 — 20:00</span></div>
-<div class="hrow"><span class="day">Terça</span><span>10:00 — 20:00</span></div>
-<div class="hrow"><span class="day">Quarta</span><span>10:00 — 20:00</span></div>
-<div class="hrow"><span class="day">Quinta</span><span>10:00 — 20:00</span></div>
-<div class="hrow"><span class="day">Sexta</span><span>10:00 — 20:00</span></div>
-<div class="hrow"><span class="day">Sábado</span><span>10:00 — 16:00</span></div>
+<div class="hrow"><span class="day">Segunda</span><span>10:00 &mdash; 20:00</span></div>
+<div class="hrow"><span class="day">Terça</span><span>10:00 &mdash; 20:00</span></div>
+<div class="hrow"><span class="day">Quarta</span><span>10:00 &mdash; 20:00</span></div>
+<div class="hrow"><span class="day">Quinta</span><span>10:00 &mdash; 20:00</span></div>
+<div class="hrow"><span class="day">Sexta</span><span>10:00 &mdash; 20:00</span></div>
+<div class="hrow"><span class="day">Sábado</span><span>10:00 &mdash; 16:00</span></div>
 <div class="hrow"><span class="day">Domingo</span><span class="cl">Fechado</span></div>
 </div>
 </div></section>
 
-<footer><div class="wrap">© 2026 OITO Barbearia · Primavera &amp; Hamburgo Velho · Novo Hamburgo/RS</div></footer>
+<footer><div class="wrap">OITO Barbearia &middot; Primavera &amp; Hamburgo Velho &middot; Novo Hamburgo/RS &middot; &copy; 2026</div></footer>
 </body>
 </html>
